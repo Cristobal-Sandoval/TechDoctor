@@ -8,42 +8,42 @@
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-outlier: 'DM Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-  /* 80% Fondos y Superficies Claras (Dose) */
-  --color-paper: #F7F5EE;
-  --color-paper-2: #EFECE2;
-  --color-paper-3: #E4E0D4;
-  --color-card: #FFFEFC;
-  --color-card-top: #FFFEFC;
-  --color-card-bottom: #F9F8F4;
+  /* 80% Fondos y Superficies Claras (Dose Amigable y Cálido) */
+  --color-paper: #FAF8F3;
+  --color-paper-2: #F2EFE6;
+  --color-paper-3: #E7E3D8;
+  --color-card: #FCFAF6;
+  --color-card-top: #FCFAF6;
+  --color-card-bottom: #F6F3EC;
 
-  /* 15% Tinta y Estructura (Petróleo Carbón Profundo & Pizarra Suave) */
-  --color-ink: #16302F;
-  --color-ink-2: #274544;
-  --color-muted: #4E6160;
-  --color-rule: #E3E1D8;
+  /* 15% Tinta y Estructura (Petróleo Cálido y Profundo) */
+  --color-ink: #153635;
+  --color-ink-2: #244645;
+  --color-muted: #476361;
+  --color-rule: #E4E1D8;
   --color-rule-dark: #CAC6BA;
 
-  /* 5% Acento de Marca Quirúrgico (Menta Eucalipto Suave) */
-  --color-accent: #5BB8A9;
-  --color-accent-soft: #E4F3F0;
-  --color-accent-deep: #16302F;
-  --color-accent-ink: #16302F;
-  --color-focus: #5BB8A9;
+  /* 5% Acento de Marca Quirúrgico Amigable (Menta Eucalipto del Logo) */
+  --color-accent: #3EB4A2;
+  --color-accent-soft: #E8F6F4;
+  --color-accent-deep: #153635;
+  --color-accent-ink: #153635;
+  --color-focus: #3EB4A2;
 
   /* Controles Moldeados Dose (CTA Primario Oscuro Anti-WhatsApp) */
-  --btn-grad-top: #1F4240;
-  --btn-grad-bottom: #16302F;
-  --btn-rim: #0E201F;
-  --btn-sec-top: #FFFEFC;
-  --btn-sec-bottom: #F2EFE7;
-  --btn-sec-rim: #D5D2C5;
+  --btn-grad-top: #1A3E3D;
+  --btn-grad-bottom: #12302F;
+  --btn-rim: #0B2120;
+  --btn-sec-top: #FCFAF6;
+  --btn-sec-bottom: #F0ECE2;
+  --btn-sec-rim: #D6D2C5;
   --glint: rgba(255, 255, 255, 0.85);
   --glint-subtle: rgba(255, 255, 255, 0.18);
-  --shadow-color: rgba(22, 48, 47, 0.08);
-  --shadow-color-deep: rgba(22, 48, 47, 0.22);
+  --shadow-color: rgba(21, 54, 53, 0.06);
+  --shadow-color-deep: rgba(21, 54, 53, 0.18);
 
-  --radius-card: 14px;
-  --radius-input: 10px;
+  --radius-card: 16px;
+  --radius-input: 12px;
   --radius-pill: 999px;
   --tracking-display: -0.025em;
 }

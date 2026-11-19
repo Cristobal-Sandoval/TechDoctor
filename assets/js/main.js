@@ -57,31 +57,31 @@ const CATALOG = {
   pc: {
     label: "PC de Escritorio",
     badge: "PC Escritorio",
-    surcharge: 5000,
+    surcharge: 0,
     subheading: "Valores claros y fijos para PC de escritorio (Torre / Gamer). Diagnóstico honesto y mantención dedicada.",
     services: {
       formateo: {
-        price: 25000,
+        price: 20000,
         desc: "Para computadores de escritorio o PC gamer lentos, con virus o fallas de Windows.",
         subtext: "PC de Escritorio · Windows limpio y rápido",
         note: "Instalación limpia, drivers y respaldo de datos",
-        waMessage: "¡Hola Tech Doctor! 👋 Me gustaría agendar el servicio de Formateo y Optimización para mi PC de escritorio ($25.000 CLP). ¿Cómo coordinamos en Concepción?"
+        waMessage: "¡Hola Tech Doctor! 👋 Me gustaría agendar el servicio de Formateo y Optimización para mi PC de escritorio ($20.000 CLP). ¿Cómo coordinamos en Concepción?"
       },
       pack: {
-        price: 35000,
-        oldPrice: 45000,
-        stampNote: "Precio pack",
+        price: 40000,
+        oldPrice: 50000,
+        stampNote: "Ahorras $10.000",
         desc: "Tu PC de escritorio o torre gamer renovado por dentro y por fuera.",
         subtext: "Limpieza profunda + Formateo completo",
         note: "Incluye limpieza física profunda + formateo optimizado",
-        waMessage: "¡Hola Tech Doctor! 👋 Quiero agendar el Pack Completo (Limpieza + Formateo) para mi PC de escritorio ($35.000 CLP). ¿Cómo coordinamos en Concepción?"
+        waMessage: "¡Hola Tech Doctor! 👋 Quiero agendar el Pack Completo (Limpieza + Formateo) para mi PC de escritorio ($40.000 CLP). ¿Cómo coordinamos en Concepción?"
       },
       limpieza: {
-        price: 25000,
+        price: 30000,
         desc: "Para PC de escritorio o torre gamer con polvo acumulado, temperaturas altas o ventiladores ruidosos.",
         subtext: "PC de Escritorio · Mantención térmica preventiva",
         note: "Desensamble, limpieza de turbinas y nueva pasta térmica",
-        waMessage: "¡Hola Tech Doctor! 👋 Quiero agendar una Limpieza Física y Mantención para mi PC de escritorio ($25.000 CLP). ¿Cómo coordinamos en Concepción?"
+        waMessage: "¡Hola Tech Doctor! 👋 Quiero agendar una Limpieza Física y Mantención para mi PC de escritorio ($30.000 CLP). ¿Cómo coordinamos en Concepción?"
       }
     }
   }
