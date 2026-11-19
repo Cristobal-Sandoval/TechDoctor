@@ -18,7 +18,7 @@
   /* 15% Tinta y Estructura (Petróleo Carbón Profundo & Pizarra Suave) */
   --color-ink: #16302F;
   --color-ink-2: #274544;
-  --color-muted: #4E6160;
+  --color-muted: #364B4A;
   --color-rule: #E3E1D8;
   --color-rule-dark: #CAC6BA;
 
@@ -68,8 +68,8 @@ body {
   background-color: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.55;
+  font-size: 1.05rem;
+  line-height: 1.6;
   caret-color: var(--color-accent);
 }
 
