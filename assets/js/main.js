@@ -33,7 +33,7 @@ const CATALOG = {
         price: 20000,
         desc: "Para notebooks lentos, con virus o fallas de Windows.",
         subtext: "Notebook · Windows limpio y rápido",
-        note: "Instalación limpia, drivers y respaldo de datos",
+        note: "Instalación limpia y controladores oficiales",
         waMessage: "¡Hola Tech Doctor! 👋 Me gustaría agendar el servicio de Formateo y Optimización para mi notebook ($20.000 CLP). ¿Cómo coordinamos en Concepción?"
       },
       pack: {
@@ -64,7 +64,7 @@ const CATALOG = {
         price: 20000,
         desc: "Para computadores de escritorio o PC gamer lentos, con virus o fallas de Windows.",
         subtext: "PC de Escritorio · Windows limpio y rápido",
-        note: "Instalación limpia, drivers y respaldo de datos",
+        note: "Instalación limpia y controladores oficiales",
         waMessage: "¡Hola Tech Doctor! 👋 Me gustaría agendar el servicio de Formateo y Optimización para mi PC de escritorio ($20.000 CLP). ¿Cómo coordinamos en Concepción?"
       },
       pack: {
