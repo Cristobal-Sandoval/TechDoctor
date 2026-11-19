@@ -4,14 +4,13 @@
  * 
  * =========================================================================
  * ⚙️ CONFIGURACIÓN DE CONTACTO:
- * Reemplaza '569XXXXXXXX' por tu número de WhatsApp real con código de país.
- * Ejemplo para Chile: '56912345678'
+ * Número oficial de WhatsApp: +56 9 5662 8609 (56956628609)
  * =========================================================================
  */
 
 const TECH_DOCTOR_CONFIG = {
-  // LÍNEA 14: Reemplaza aquí tu número de WhatsApp real (ej: '56912345678')
-  phone: "569XXXXXXXX",
+  // Número de WhatsApp oficial de Tech Doctor en Concepción, Chile
+  phone: "56956628609",
   
   instagramUrl: "https://www.instagram.com/techdoctor.ccp/",
   instagramHandle: "@techdoctor.ccp",

@@ -31,16 +31,15 @@ tech-doctor/
 
 ---
 
-## 📱 ¿Cómo configurar tu número de WhatsApp?
+## 📱 Número de WhatsApp Configurado
 
-El número de contacto está centralizado en JavaScript:
+El número de contacto oficial está centralizado en JavaScript:
 
-1. Abre el archivo: `assets/js/main.js`
-2. Ve a la **línea 14**:
-   ```javascript
-   phone: "569XXXXXXXX", // <-- Reemplaza por tu número real con código de país (ej: "56912345678")
-   ```
-3. Guarda el archivo. Todos los botones de WhatsApp del sitio, el botón flotante y el formulario de cotización en tiempo real se actualizarán automáticamente.
+```javascript
+phone: "56956628609", // Tech Doctor Concepción (+56 9 5662 8609)
+```
+
+Todos los botones de WhatsApp del sitio, el botón flotante y el formulario de cotización en tiempo real abren directamente una conversación con este número.
 
 ---
 
