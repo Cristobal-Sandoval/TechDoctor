@@ -1,0 +1,5 @@
+# Dependencias y temporales
+.agents/
+.DS_Store
+Thumbs.db
+*.log

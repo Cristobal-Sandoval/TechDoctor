@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Doctor | Servicio Técnico y Desarrollo Web en Concepción</title>
+  <meta name="description" content="Servicio técnico de computadores en Concepción, Chile. Formateo desde $20.000, limpieza física con pasta térmica y páginas web. Precios 100% transparentes.">
+  <meta name="keywords" content="servicio técnico computadores concepción, servicio técnico notebook concepción, formateo pc concepción, limpieza notebook concepción, pasta térmica concepción, desarrollo web concepción">
+  <meta name="author" content="Tech Doctor">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F7F5EE">
+  <link rel="canonical" href="http://localhost:8080/">
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="business.business">
+  <meta property="og:title" content="Tech Doctor | Servicio Técnico y Desarrollo Web en Concepción">
+  <meta property="og:description" content="Tu computador como nuevo, rápido. Mantención térmica, formateo y páginas web en Concepción.">
+  <meta property="og:url" content="http://localhost:8080/">
+  <meta property="og:image" content="assets/logo.jpg">
+  <meta property="og:locale" content="es_CL">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tech Doctor | Servicio Técnico y Desarrollo Web en Concepción">
+  <meta name="twitter:description" content="Servicio técnico de computadores y diseño web en Concepción, Chile. Tarifas claras.">
+  <meta name="twitter:image" content="assets/logo.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+  <!-- Google Fonts: Plus Jakarta Sans + Inter + DM Mono con preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dose: {
+              paper: '#F7F5EE',
+              'paper-2': '#EFECE2',
+              'paper-3': '#E4E0D4',
+              card: '#FFFEFC',
+              ink: '#16302F',
+              'ink-2': '#274544',
+              muted: '#4E6160',
+              rule: '#E3E1D8',
+              accent: '#5BB8A9',
+              'accent-soft': '#E4F3F0',
+            }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['"Inter"', 'sans-serif'],
+            mono: ['"DM Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Estilos Hallmark Dose Tokens -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Datos Estructurados JSON-LD (SEO LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Tech Doctor",
+    "image": "assets/logo.jpg",
+    "telephone": "+569XXXXXXXX",
+    "priceRange": "$$",
+    "currenciesAccepted": "CLP",
+    "paymentAccepted": "Efectivo, Transferencia",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Concepción",
+      "addressRegion": "Biobío",
+      "addressCountry": "CL"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -36.8270,
+      "longitude": -73.0503
+    },
+    "sameAs": [
+      "https://www.instagram.com/techdoctor.ccp/"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios Tech Doctor",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Formateo y Optimización Notebook"
+          },
+          "price": "20000",
+          "priceCurrency": "CLP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Limpieza Física y Mantención Térmica Notebook"
+          },
+          "price": "20000",
+          "priceCurrency": "CLP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Pack Completo Limpieza + Formateo Notebook"
+          },
+          "price": "30000",
+          "priceCurrency": "CLP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Creación de Página Web Frontend Básica"
+          },
+          "price": "60000",
+          "priceCurrency": "CLP"
+        }
+      ]
+    }
+  }
+  </script>
+</head>
+<body class="bg-dose-paper text-dose-ink font-sans antialiased min-h-screen flex flex-col selection:bg-dose-soft selection:text-dose-ink">
+
+  <!-- =========================================================================
+       1. NAVBAR DOSE TRAY (STICKY + SPA SCROLLSPY + NO-WRAP ROBUSTO)
+       ========================================================================= -->
+  <header id="main-navbar" class="sticky top-0 z-40 tray transition-colors duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+        
+        <!-- Logo y Nombre de Marca (shrink-0 y whitespace-nowrap para evitar saltos de línea) -->
+        <a href="#inicio" class="flex items-center gap-3.5 group focus:outline-none focus:ring-2 focus:ring-dose-accent rounded-xl p-1 shrink-0">
+          <div class="relative w-11 h-11 rounded-full overflow-hidden border-2 border-dose-accent p-0.5 bg-dose-paper shadow-sm shrink-0">
+            <img src="assets/logo.jpg" alt="Logo Tech Doctor" width="44" height="44" loading="eager" fetchpriority="high" decoding="async" class="w-full h-full object-cover rounded-full">
+          </div>
+          <div class="flex flex-col whitespace-nowrap">
+            <span class="font-display font-extrabold text-xl tracking-tight text-dose-ink group-hover:text-dose-accent transition-colors leading-tight">
+              Tech Doctor
+            </span>
+            <span class="text-xs text-dose-muted font-medium tracking-wide flex items-center gap-1.5 font-mono">
+              <span class="w-1.5 h-1.5 rounded-full bg-dose-accent inline-block" aria-hidden="true"></span>
+              Concepción, Chile
+            </span>
+          </div>
+        </a>
+
+        <!-- Enlaces SPA Escritorio -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2 font-body shrink-0">
+          <a href="#inicio" class="spa-nav-link px-3 py-2 rounded-xl text-sm font-semibold text-dose-ink bg-dose-paper-2 border border-dose-rule transition-colors whitespace-nowrap">
+            Inicio
+          </a>
+          <a href="#servicios" class="spa-nav-link px-3 py-2 rounded-xl text-sm font-medium text-dose-muted hover:text-dose-ink hover:bg-dose-paper-2 transition-colors whitespace-nowrap">
+            Servicios y Precios
+          </a>
+          <a href="#desarrollo-web" class="spa-nav-link px-3 py-2 rounded-xl text-sm font-medium text-dose-muted hover:text-dose-ink hover:bg-dose-paper-2 transition-colors whitespace-nowrap">
+            Desarrollo Web
+          </a>
+          <a href="#cotizador" class="spa-nav-link px-3 py-2 rounded-xl text-sm font-medium text-dose-muted hover:text-dose-ink hover:bg-dose-paper-2 transition-colors whitespace-nowrap">
+            Cotizador
+          </a>
+          <a href="#por-que-nosotros" class="spa-nav-link px-3 py-2 rounded-xl text-sm font-medium text-dose-muted hover:text-dose-ink hover:bg-dose-paper-2 transition-colors whitespace-nowrap">
+            ¿Por qué nosotros?
+          </a>
+          <a href="https://www.instagram.com/techdoctor.ccp/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-xl text-sm font-medium text-dose-muted hover:text-dose-ink hover:bg-dose-paper-2 transition-colors flex items-center gap-1.5 font-mono text-xs whitespace-nowrap">
+            <svg class="w-4 h-4 text-dose-accent shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            @techdoctor.ccp
+          </a>
+        </nav>
+
+        <!-- CTA WhatsApp Navbar (Primario Oscuro #16302F) -->
+        <div class="hidden sm:flex items-center gap-3 shrink-0">
+          <a href="#cotizador" class="btn btn--primary btn--sm whitespace-nowrap">
+            <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            Cotizar por WhatsApp
+          </a>
+        </div>
+
+        <!-- Botón Menú Móvil -->
+        <div class="flex lg:hidden items-center gap-2">
+          <a href="https://wa.me/569XXXXXXXX" class="js-wa-link p-2.5 rounded-xl bg-dose-ink text-dose-paper shrink-0" aria-label="Abrir WhatsApp" data-wa-message="¡Hola Tech Doctor! Quisiera hacer una consulta de precios en Concepción.">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+          </a>
+          <button id="mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-dose-ink hover:bg-dose-paper-2 focus:outline-none focus:ring-2 focus:ring-dose-accent" aria-expanded="false" aria-label="Abrir menú de navegación">
+            <svg id="menu-icon-open" class="w-6 h-6 block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Menú Desplegable Móvil -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-dose-rule bg-dose-paper px-4 pt-3 pb-6 space-y-2">
+      <a href="#inicio" class="spa-nav-link block px-3 py-2.5 rounded-xl text-base font-semibold text-dose-ink bg-dose-paper-2">
+        Inicio
+      </a>
+      <a href="#servicios" class="spa-nav-link block px-3 py-2.5 rounded-xl text-base font-medium text-dose-muted hover:text-dose-ink hover:bg-dose-paper-2">
+        Servicios y Precios
+      </a>
+      <a href="#desarrollo-web" class="spa-nav-link block px-3 py-2.5 rounded-xl text-base font-medium text-dose-muted hover:text-dose-ink hover:bg-dose-paper-2">
+        Desarrollo Web
+      </a>
+      <a href="#cotizador" class="spa-nav-link block px-3 py-2.5 rounded-xl text-base font-medium text-dose-muted hover:text-dose-ink hover:bg-dose-paper-2">
+        Cotizador en Línea
+      </a>
+      <a href="#por-que-nosotros" class="spa-nav-link block px-3 py-2.5 rounded-xl text-base font-medium text-dose-muted hover:text-dose-ink hover:bg-dose-paper-2">
+        ¿Por qué Tech Doctor?
+      </a>
+      <a href="https://www.instagram.com/techdoctor.ccp/" target="_blank" rel="noopener noreferrer" class="block px-3 py-2.5 rounded-xl text-base font-medium text-dose-muted hover:text-dose-ink hover:bg-dose-paper-2">
+        Instagram (@techdoctor.ccp)
+      </a>
+      <div class="pt-3">
+        <a href="#cotizador" class="btn btn--primary w-full text-center">
+          Cotizar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- =========================================================================
+       2. HERO SECTION — ESTILO DOSE LUMINOSO
+       ========================================================================= -->
+  <main class="flex-grow">
+    <section id="inicio" class="relative pt-12 pb-20 md:pt-20 md:pb-28 border-b border-dose-rule">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Columna Izquierda: Mensaje y Conversión -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-dose-paper-2 border border-dose-rule text-xs font-mono text-dose-muted">
+              <span class="w-2 h-2 rounded-full bg-dose-accent" aria-hidden="true"></span>
+              Servicio técnico presencial en Concepción, Chile
+            </div>
+
+            <h1 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-dose-ink tracking-tight">
+              Tu computador como nuevo, rápido.
+            </h1>
+
+            <p class="text-base sm:text-lg md:text-xl text-dose-muted max-w-2xl mx-auto lg:mx-0 font-body">
+              Servicio técnico de computadores y desarrollo web en Concepción, Chile.
+            </p>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <a href="https://wa.me/569XXXXXXXX" class="js-wa-link btn btn--primary w-full sm:w-auto" data-wa-message="¡Hola Tech Doctor! 👋 Me gustaría cotizar la mantención de mi computador en Concepción.">
+                <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+                Escribir por WhatsApp
+              </a>
+
+              <a href="#servicios" class="btn btn--secondary w-full sm:w-auto">
+                Ver servicios y valores
+              </a>
+            </div>
+
+            <!-- Métricas de Confianza -->
+            <div class="pt-6 grid grid-cols-3 gap-3 border-t border-dose-rule text-left font-mono">
+              <div class="p-3 rounded-xl bg-dose-card border border-dose-rule shadow-sm">
+                <span class="block text-dose-muted text-xs font-semibold">T-reacción</span>
+                <span class="text-sm font-bold text-dose-ink">2 a 4 hrs</span>
+              </div>
+              <div class="p-3 rounded-xl bg-dose-card border border-dose-rule shadow-sm">
+                <span class="block text-dose-muted text-xs font-semibold">Pasta térmica</span>
+                <span class="text-sm font-bold text-dose-ink">Alta gama</span>
+              </div>
+              <div class="p-3 rounded-xl bg-dose-card border border-dose-rule shadow-sm">
+                <span class="block text-dose-muted text-xs font-semibold">Garantía</span>
+                <span class="text-sm font-bold text-dose-ink">100% real</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Columna Derecha: Tarjeta Ficha Técnica Hallmark Dose -->
+          <div class="lg:col-span-5 flex justify-center items-center relative">
+            <div class="w-full max-w-sm dose-label p-6 relative bg-dose-card">
+              
+              <div class="flex items-center justify-between border-b border-dose-rule pb-4 mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-dose-accent p-0.5 bg-dose-paper shrink-0 shadow-sm">
+                    <img src="assets/logo.jpg" alt="Logo Tech Doctor" width="48" height="48" loading="eager" decoding="async" class="w-full h-full object-cover rounded-full">
+                  </div>
+                  <div>
+                    <span class="font-display font-bold text-base text-dose-ink block leading-none">Tech Doctor</span>
+                    <span class="font-mono text-[11px] text-dose-muted">Servicio Técnico Especializado</span>
+                  </div>
+                </div>
+
+                <div class="stamp">
+                  <span>Garantizado</span>
+                  <span>100% probado</span>
+                </div>
+              </div>
+
+              <div class="space-y-3 font-mono text-xs">
+                <div class="flex justify-between py-1 border-b border-dose-paper-2">
+                  <span class="text-dose-muted">Equipo:</span>
+                  <span class="text-dose-ink font-semibold">Notebook o PC torre</span>
+                </div>
+                <div class="flex justify-between py-1 border-b border-dose-paper-2">
+                  <span class="text-dose-muted">Problema común:</span>
+                  <span class="text-dose-ink font-semibold">Lentitud o calor</span>
+                </div>
+                <div class="flex justify-between py-1 border-b border-dose-paper-2">
+                  <span class="text-dose-muted">Solución:</span>
+                  <span class="text-dose-ink font-bold">Mantención física + formateo</span>
+                </div>
+                <div class="flex justify-between py-1 border-b border-dose-paper-2">
+                  <span class="text-dose-muted">Estado final:</span>
+                  <span class="text-dose-ink font-semibold">100% veloz y operativo</span>
+                </div>
+              </div>
+
+              <div class="label__stub flex items-center justify-between text-xs px-2">
+                <div>
+                  <span class="text-[10px] text-dose-muted block font-mono">Atención directa</span>
+                  <span class="font-display font-extrabold text-sm text-dose-ink">Concepción, Chile</span>
+                </div>
+                <div class="text-right">
+                  <span class="text-[10px] text-dose-muted block font-mono">Servicio recomendado</span>
+                  <span class="font-mono font-bold text-dose-ink text-base">$30.000 CLP</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         3. SECCIÓN SERVICIOS TÉCNICOS Y PRECIOS TRANSPARENTES
+         ========================================================================= -->
+    <section id="servicios" class="scroll-mt-24 py-16 md:py-24 bg-dose-card border-b border-dose-rule relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-dose-paper-2 border border-dose-rule text-xs font-mono text-dose-muted">
+            <span class="w-1.5 h-1.5 rounded-full bg-dose-accent" aria-hidden="true"></span>
+            Valores transparentes y sin sorpresas
+          </div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-dose-ink tracking-tight">
+            Servicio Técnico en Concepción: Precios Transparentes
+          </h2>
+          <p class="text-dose-muted text-base sm:text-lg font-body">
+            Valores publicados para notebooks. Diagnóstico honesto, sin costos sorpresa ni diagnósticos inflados.
+          </p>
+        </div>
+
+        <!-- Grilla de Precios: 3 Tarjetas -->
+        <div class="grid md:grid-cols-3 gap-8 items-stretch">
+          
+          <!-- Tarjeta 1: Formateo y Optimización -->
+          <div class="dose-label p-7 flex flex-col justify-between group">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="pill pill--accent font-mono text-xs">Software &middot; Formateo</span>
+                <span class="text-xs font-mono text-dose-muted">2 a 3 hrs</span>
+              </div>
+
+              <div>
+                <h3 class="font-display font-bold text-xl text-dose-ink">
+                  Formateo y optimización
+                </h3>
+                <p class="text-xs sm:text-sm text-dose-muted mt-1.5 font-body">
+                  Para notebooks con lentitud severa, errores de sistema o virus.
+                </p>
+              </div>
+
+              <div class="pt-3 border-t border-dose-rule">
+                <div class="flex items-baseline gap-1.5 font-mono">
+                  <span class="text-2xl font-extrabold text-dose-ink">$20.000</span>
+                  <span class="text-xs font-semibold text-dose-muted">CLP</span>
+                </div>
+                <span class="text-[11px] text-dose-muted font-mono block mt-0.5">Notebook &middot; Windows limpio y veloz</span>
+              </div>
+
+              <ul class="space-y-2 pt-2 text-xs text-dose-muted font-body">
+                <li class="flex items-start gap-2">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span>Instalación limpia de Windows sin bloatware ni basura.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span>Controladores oficiales y optimización de disco SSD.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span>Respaldo seguro de tus documentos, fotos y claves.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span>Programas esenciales (navegadores, ofimática y antivirus).</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="label__stub pt-5 mt-6 px-1">
+              <a href="https://wa.me/569XXXXXXXX" class="js-wa-link btn btn--secondary w-full" data-wa-message="¡Hola Tech Doctor! 👋 Me gustaría agendar el servicio de Formateo y Optimización para mi notebook ($20.000 CLP). ¿Cuándo tienen disponibilidad en Concepción?">
+                Agendar formateo
+              </a>
+              <div class="text-center mt-2.5">
+                <a href="#cotizador" class="js-select-service text-xs text-dose-muted hover:text-dose-ink font-mono underline" data-service-val="formateo">
+                  O cotizar en formulario
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2: Pack Completo (Destacado - Bug Stamp Corregido) -->
+          <div class="dose-label dose-label--featured p-7 flex flex-col justify-between relative transform md:-translate-y-2 group">
+            
+            <!-- Stamp Badge No Cortado -->
+            <div class="absolute -top-3.5 right-6 z-10 stamp">
+              <span>Más popular</span>
+              <span>Ahorras $10.000</span>
+            </div>
+
+            <div class="space-y-4 pt-1">
+              <div class="flex items-center justify-between">
+                <span class="pill pill--accent font-mono text-xs">Mantención integral</span>
+              </div>
+
+              <div>
+                <h3 class="font-display font-bold text-xl text-dose-ink">
+                  Pack completo: limpieza + formateo
+                </h3>
+                <p class="text-xs sm:text-sm text-dose-muted mt-1.5 font-body">
+                  Tu notebook renovado por dentro y por fuera.
+                </p>
+              </div>
+
+              <div class="pt-3 border-t border-dose-rule">
+                <div class="flex items-baseline gap-2 font-mono">
+                  <span class="text-2xl sm:text-3xl font-extrabold text-dose-ink">$30.000</span>
+                  <span class="text-xs font-semibold text-dose-muted">CLP</span>
+                  <span class="text-xs text-dose-muted line-through ml-2 font-mono">$40.000</span>
+                </div>
+                <span class="text-[11px] text-dose-muted font-mono block mt-0.5">Hardware y software completo</span>
+              </div>
+
+              <ul class="space-y-2 pt-2 text-xs text-dose-ink font-body">
+                <li class="flex items-start gap-2">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span><strong>Limpieza profunda</strong> de ventiladores y placa disipadora.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span><strong>Pasta térmica</strong> de alta conductividad renovada.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span><strong>Formateo limpio</strong>, controladores y respaldo seguro.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span>Test de rendimiento y chequeo de estabilidad térmica final.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="label__stub pt-5 mt-6 px-1">
+              <a href="https://wa.me/569XXXXXXXX" class="js-wa-link btn btn--primary w-full" data-wa-message="¡Hola Tech Doctor! 👋 Quiero agendar el Pack Completo (Limpieza + Formateo) para mi notebook ($30.000 CLP). ¿Tienen horas disponibles en Concepción?">
+                Agendar pack completo
+              </a>
+              <div class="text-center mt-2.5">
+                <a href="#cotizador" class="js-select-service text-xs text-dose-muted hover:text-dose-ink font-mono underline" data-service-val="pack">
+                  O cotizar en formulario
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 3: Limpieza Física y Mantención -->
+          <div class="dose-label p-7 flex flex-col justify-between group">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="pill pill--accent font-mono text-xs">Mantención térmica</span>
+                <span class="text-xs font-mono text-dose-muted">2 a 3 hrs</span>
+              </div>
+
+              <div>
+                <h3 class="font-display font-bold text-xl text-dose-ink">
+                  Limpieza física y mantención
+                </h3>
+                <p class="text-xs sm:text-sm text-dose-muted mt-1.5 font-body">
+                  Para notebooks con exceso de calor, ruido fuerte o que se apagan.
+                </p>
+              </div>
+
+              <div class="pt-3 border-t border-dose-rule">
+                <div class="flex items-baseline gap-1.5 font-mono">
+                  <span class="text-2xl font-extrabold text-dose-ink">$20.000</span>
+                  <span class="text-xs font-semibold text-dose-muted">CLP</span>
+                </div>
+                <span class="text-[11px] text-dose-muted font-mono block mt-0.5">Notebook &middot; Mantenimiento térmico preventivo</span>
+              </div>
+
+              <ul class="space-y-2 pt-2 text-xs text-dose-muted font-body">
+                <li class="flex items-start gap-2">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span>Desensamble cuidadoso y retiro de polvo en disipadores.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span>Limpieza de aspas de ventilador y lubricación de eje.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span>Cambio de pasta térmica seca por pasta de alto rendimiento.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span>Verificación de temperaturas antes y después del servicio.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="label__stub pt-5 mt-6 px-1">
+              <a href="https://wa.me/569XXXXXXXX" class="js-wa-link btn btn--secondary w-full" data-wa-message="¡Hola Tech Doctor! 👋 Quiero agendar una Limpieza Física y Mantención para mi notebook ($20.000 CLP). ¿Cómo coordinamos en Concepción?">
+                Agendar mantención
+              </a>
+              <div class="text-center mt-2.5">
+                <a href="#cotizador" class="js-select-service text-xs text-dose-muted hover:text-dose-ink font-mono underline" data-service-val="limpieza">
+                  O cotizar en formulario
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Nota visible para PC de Escritorio -->
+        <div class="mt-10 p-5 rounded-2xl bg-dose-paper-2 border border-dose-rule flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3.5 text-left">
+            <div class="p-2.5 rounded-xl bg-dose-paper border border-dose-rule text-dose-accent shrink-0">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <div>
+              <span class="font-display font-bold text-sm text-dose-ink block">Nota transparente para PC de escritorio (Torre / Gamer)</span>
+              <p class="text-xs text-dose-muted font-body">
+                Por la mayor cantidad de componentes, ventiladores y volumen de desarme, los servicios en PC tienen un recargo de <strong>$5.000 CLP</strong>.
+              </p>
+            </div>
+          </div>
+
+          <a href="https://wa.me/569XXXXXXXX" class="js-wa-link btn btn--secondary btn--sm shrink-0 whitespace-nowrap" data-wa-message="¡Hola Tech Doctor! 👋 Quisiera cotizar mantención para mi PC de escritorio en Concepción.">
+            Consultar por PC Torre
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         4. SECCIÓN DESARROLLO WEB FRONTEND
+         ========================================================================= -->
+    <section id="desarrollo-web" class="scroll-mt-24 py-16 md:py-24 bg-dose-paper border-b border-dose-rule relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-dose-paper-2 border border-dose-rule text-xs font-mono text-dose-muted">
+            <span class="w-1.5 h-1.5 rounded-full bg-dose-accent" aria-hidden="true"></span>
+            Presencia web &middot; Sin mensualidades ocultas
+          </div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-dose-ink tracking-tight">
+            Creación de Páginas Web para Profesionales y Pymes
+          </h2>
+          <p class="text-dose-muted text-base sm:text-lg font-body">
+            Sitios web rápidos, modernos y adaptados a teléfonos para convertir visitas en consultas directas por WhatsApp o Instagram.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-12 gap-8 items-stretch max-w-5xl mx-auto">
+          
+          <!-- Plan Principal: Web Frontend Básica -->
+          <div class="md:col-span-7 dose-label p-7 flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="pill pill--accent font-mono text-xs">Diseño Web Frontend</span>
+                <span class="text-xs font-mono text-dose-muted">5 a 7 días</span>
+              </div>
+
+              <div>
+                <h3 class="font-display font-bold text-2xl text-dose-ink">
+                  Página web básica
+                </h3>
+                <p class="text-xs sm:text-sm text-dose-muted mt-1.5 font-body">
+                  Landing page de alta conversión o sitio de hasta 2 páginas (solo frontend ultraligero).
+                </p>
+              </div>
+
+              <div class="pt-3 border-t border-dose-rule">
+                <div class="flex items-baseline gap-2 font-mono">
+                  <span class="text-3xl font-extrabold text-dose-ink">$60.000</span>
+                  <span class="text-xs font-semibold text-dose-muted">CLP</span>
+                  <span class="text-xs font-mono text-dose-muted ml-2">Pago único</span>
+                </div>
+                <span class="text-[11px] text-dose-muted font-mono block mt-0.5">Sin contratos forzados ni cobros mensuales ocultos</span>
+              </div>
+
+              <ul class="space-y-2.5 pt-2 text-xs sm:text-sm text-dose-ink font-body">
+                <li class="flex items-start gap-2.5">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span><strong>Diseño 100% responsivo</strong> (optimizado mobile-first para celulares y PC).</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span><strong>Conversión a WhatsApp:</strong> Botones y cotizador con mensajes prellenados.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span><strong>Carga instantánea:</strong> Código HTML5, Tailwind CSS y JS optimizado.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span><strong>SEO Local básico:</strong> Etiquetas para Google y enlaces a Instagram.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span><strong>Hosting gratuito recomendado:</strong> Sin costo mensual en plataformas modernas.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="label__stub pt-5 mt-6 px-1">
+              <a href="https://wa.me/569XXXXXXXX" class="js-wa-link btn btn--primary w-full" data-wa-message="¡Hola Tech Doctor! 👋 Me interesa cotizar una Página Web Básica ($60.000 CLP) para mi negocio en Concepción. ¿Cómo podemos empezar?">
+                Cotizar página web
+              </a>
+            </div>
+          </div>
+
+          <!-- Adicional: Dominio .cl Opcional -->
+          <div class="md:col-span-5 dose-label p-7 flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="pill font-mono text-xs">Dominio oficial .cl</span>
+                <span class="text-xs font-mono text-dose-muted">Opcional</span>
+              </div>
+
+              <div>
+                <h3 class="font-display font-bold text-xl text-dose-ink">
+                  Nombre de dominio .cl
+                </h3>
+                <p class="text-xs sm:text-sm text-dose-muted mt-1.5 font-body">
+                  Tu dirección oficial en internet (ej: <span class="font-mono text-dose-ink">tunegocio.cl</span>).
+                </p>
+              </div>
+
+              <div class="pt-3 border-t border-dose-rule">
+                <div class="flex items-baseline gap-2 font-mono">
+                  <span class="text-2xl font-extrabold text-dose-ink">+$10.000</span>
+                  <span class="text-xs font-semibold text-dose-muted">CLP</span>
+                </div>
+                <span class="text-[11px] text-dose-muted font-mono block mt-0.5">Total Web + Dominio: <strong>$70.000 CLP</strong></span>
+              </div>
+
+              <ul class="space-y-2 pt-2 text-xs text-dose-muted font-body">
+                <li class="flex items-start gap-2">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span>Registro y compra de dominio oficial en NIC Chile por 1 año.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span>Configuración de DNS y certificado de seguridad HTTPS (candado verde).</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-dose-accent font-bold">&check;</span>
+                  <span>Vinculación directa a tu sitio web sin pasos técnicos para ti.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="label__stub pt-5 mt-6 px-1">
+              <a href="https://wa.me/569XXXXXXXX" class="js-wa-link btn btn--secondary w-full" data-wa-message="¡Hola Tech Doctor! 👋 Quiero cotizar el pack completo de Página Web + Dominio .cl ($70.000 CLP).">
+                Cotizar web + dominio .cl
+              </a>
+              <div class="text-center mt-2.5">
+                <a href="#cotizador" class="js-select-service text-xs text-dose-muted hover:text-dose-ink font-mono underline" data-service-val="web-dominio">
+                  O cotizar en formulario
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         5. COTIZADOR INTERACTIVO A WHATSAPP (SIN BACKEND)
+         ========================================================================= -->
+    <section id="cotizador" class="scroll-mt-24 py-16 md:py-24 bg-dose-card border-b border-dose-rule relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-dose-paper-2 border border-dose-rule text-xs font-mono text-dose-muted">
+            <span class="w-1.5 h-1.5 rounded-full bg-dose-accent" aria-hidden="true"></span>
+            Cotización directa &middot; Respuesta rápida
+          </div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-dose-ink tracking-tight">
+            Cotiza tu Servicio en Tiempo Real
+          </h2>
+          <p class="text-dose-muted text-base sm:text-lg font-body">
+            Selecciona tu equipo y servicio. Se calculará el valor estimado y podrás enviar tu consulta lista a nuestro WhatsApp con un solo clic.
+          </p>
+        </div>
+
+        <!-- Contenedor Ficha de Cotización Formulario -->
+        <div class="max-w-2xl mx-auto dose-label p-6 sm:p-10 relative">
+          
+          <div class="flex items-center justify-between border-b border-dose-rule pb-5 mb-6">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full overflow-hidden border border-dose-accent p-0.5 bg-dose-paper shrink-0">
+                <img src="assets/logo.jpg" alt="Logo Tech Doctor" width="40" height="40" loading="lazy" decoding="async" class="w-full h-full object-cover rounded-full">
+              </div>
+              <div>
+                <span class="font-display font-bold text-base text-dose-ink block leading-none">Cotizador de Servicio</span>
+                <span class="font-mono text-xs text-dose-muted">Tech Doctor &middot; Concepción</span>
+              </div>
+            </div>
+            <div class="stamp">
+              <span>Sin compromiso</span>
+              <span>Respuesta rápida</span>
+            </div>
+          </div>
+
+          <form id="whatsapp-quote-form" class="space-y-5">
+            
+            <!-- Campo 1: Nombre -->
+            <div>
+              <label for="form-name" class="block font-display font-semibold text-xs sm:text-sm text-dose-ink mb-1.5">
+                Tu nombre o contacto <span class="text-dose-accent">*</span>
+              </label>
+              <input type="text" id="form-name" required placeholder="Ej: Marcela González" class="w-full h-12 px-4 rounded-xl bg-dose-paper border border-dose-rule text-dose-ink font-body text-sm focus:outline-none focus:ring-2 focus:ring-dose-accent transition-colors placeholder:text-dose-muted/60">
+            </div>
+
+            <!-- Campo 2: Tipo de Equipo -->
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="form-device" class="block font-display font-semibold text-xs sm:text-sm text-dose-ink mb-1.5">
+                  Tipo de equipo
+                </label>
+                <select id="form-device" class="w-full h-12 px-4 rounded-xl bg-dose-paper border border-dose-rule text-dose-ink font-body text-sm focus:outline-none focus:ring-2 focus:ring-dose-accent transition-colors">
+                  <option value="notebook" selected>Notebook</option>
+                  <option value="pc">PC de Escritorio / Torre Gamer (+ $5.000)</option>
+                  <option value="otro">Otro / No estoy seguro</option>
+                </select>
+              </div>
+
+              <!-- Campo 3: Servicio de Interés -->
+              <div>
+                <label for="form-service" class="block font-display font-semibold text-xs sm:text-sm text-dose-ink mb-1.5">
+                  Servicio solicitado
+                </label>
+                <select id="form-service" class="w-full h-12 px-4 rounded-xl bg-dose-paper border border-dose-rule text-dose-ink font-body text-sm focus:outline-none focus:ring-2 focus:ring-dose-accent transition-colors">
+                  <option value="pack" selected>Pack Completo: Limpieza + Formateo ($30.000)</option>
+                  <option value="formateo">Formateo y Optimización ($20.000)</option>
+                  <option value="limpieza">Limpieza Física y Mantención ($20.000)</option>
+                  <option value="web-basica">Página Web Básica ($60.000)</option>
+                  <option value="web-dominio">Página Web + Dominio .cl ($70.000)</option>
+                  <option value="consulta">Consulta Técnica / Otro problema</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Campo 4: Detalle o Problema -->
+            <div>
+              <label for="form-problem" class="block font-display font-semibold text-xs sm:text-sm text-dose-ink mb-1.5">
+                ¿Qué le ocurre a tu equipo? <span class="font-normal text-dose-muted text-xs">(Opcional)</span>
+              </label>
+              <textarea id="form-problem" rows="3" placeholder="Ej: Se calienta mucho y los ventiladores suenan fuerte, o se demora mucho en encender..." class="w-full p-4 rounded-xl bg-dose-paper border border-dose-rule text-dose-ink font-body text-sm focus:outline-none focus:ring-2 focus:ring-dose-accent transition-colors placeholder:text-dose-muted/60 resize-none"></textarea>
+            </div>
+
+            <!-- Vista Previa de Estimación Dinámica (En papel suave) -->
+            <div class="p-4 rounded-xl bg-dose-paper border border-dose-rule flex items-center justify-between font-mono">
+              <div>
+                <span class="text-xs text-dose-muted block font-mono">Presupuesto estimado:</span>
+                <span id="estimate-note-display" class="text-[11px] text-dose-muted font-body block">Incluye limpieza física profunda + formateo</span>
+              </div>
+              <div class="text-right">
+                <span id="estimate-price-display" class="font-display font-extrabold text-xl sm:text-2xl text-dose-ink">$30.000 CLP</span>
+              </div>
+            </div>
+
+            <!-- Botón de Envío -->
+            <div class="pt-2">
+              <button type="submit" class="btn btn--primary w-full">
+                <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+                Enviar cotización por WhatsApp
+              </button>
+              <p class="text-center text-[11px] text-dose-muted font-mono mt-2">
+                Se abrirá WhatsApp Web o la App oficial con tu mensaje ya redactado
+              </p>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         6. ¿POR QUÉ ELEGIR TECH DOCTOR?
+         ========================================================================= -->
+    <section id="por-que-nosotros" class="scroll-mt-24 py-16 md:py-24 bg-dose-paper border-b border-dose-rule relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-5 space-y-6 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-dose-paper-2 border border-dose-rule text-xs font-mono text-dose-muted">
+              <span class="w-1.5 h-1.5 rounded-full bg-dose-accent" aria-hidden="true"></span>
+              Confianza local &middot; Servicio profesional
+            </div>
+            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-dose-ink tracking-tight leading-tight">
+              ¿Por qué confiar en Tech Doctor en Concepción?
+            </h2>
+            <p class="text-dose-muted text-base font-body leading-relaxed">
+              Tu computador es una herramienta de trabajo o estudio indispensable. En Tech Doctor tratamos tu equipo con rigor técnico, sin inventar problemas ni cobrar de más.
+            </p>
+
+            <div class="p-5 rounded-2xl bg-dose-card border border-dose-rule shadow-sm space-y-2 text-left">
+              <h3 class="font-display font-bold text-dose-ink text-base">Compromiso de calidad</h3>
+              <p class="text-xs text-dose-muted font-body leading-relaxed">
+                Diagnóstico claro antes de intervenir, componentes cuidados con guantes y herramientas antiestáticas, y equipo 100% operativo verificado.
+              </p>
+            </div>
+
+            <div>
+              <a href="https://wa.me/569XXXXXXXX" class="js-wa-link inline-flex items-center gap-2 text-dose-ink font-display font-bold hover:underline text-sm" data-wa-message="¡Hola Tech Doctor! 👋 Tengo una duda técnica con mi equipo, ¿me podrías orientar?">
+                ¿Tienes dudas específicas? Escríbenos por WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5">
+            
+            <div class="p-6 rounded-2xl bg-dose-card border border-dose-rule shadow-sm space-y-2">
+              <span class="font-mono text-xs font-bold text-dose-muted block">01 / Local</span>
+              <h3 class="font-display font-bold text-lg text-dose-ink">
+                Atención personalizada
+              </h3>
+              <p class="text-xs sm:text-sm text-dose-muted font-body leading-relaxed">
+                Trato directo en Concepción. Hablas con la misma persona que revisa tu máquina, en un lenguaje simple y sin tecnicismos innecesarios.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-dose-card border border-dose-rule shadow-sm space-y-2">
+              <span class="font-mono text-xs font-bold text-dose-muted block">02 / Ética</span>
+              <h3 class="font-display font-bold text-lg text-dose-ink">
+                Precios transparentes
+              </h3>
+              <p class="text-xs sm:text-sm text-dose-muted font-body leading-relaxed">
+                Sin sorpresas ni cobros ocultos. Todos nuestros valores están publicados por adelantado antes de que nos entregues tu equipo.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-dose-card border border-dose-rule shadow-sm space-y-2">
+              <span class="font-mono text-xs font-bold text-dose-muted block">03 / Tiempo</span>
+              <h3 class="font-display font-bold text-lg text-dose-ink">
+                Rapidez y cumplimiento
+              </h3>
+              <p class="text-xs sm:text-sm text-dose-muted font-body leading-relaxed">
+                Entregas ágiles habituales de 2 a 4 horas en mantenciones. Cumplimiento riguroso de los plazos comprometidos.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-dose-card border border-dose-rule shadow-sm space-y-2">
+              <span class="font-mono text-xs font-bold text-dose-muted block">04 / Rigor</span>
+              <h3 class="font-display font-bold text-lg text-dose-ink">
+                Cuidado y garantía
+              </h3>
+              <p class="text-xs sm:text-sm text-dose-muted font-body leading-relaxed">
+                Herramientas de precisión, pasta térmica de alta conductividad y estricta confidencialidad de tus datos personales.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         7. STATEMENT BAND (INK DARK BAND #16302F)
+         ========================================================================= -->
+    <section class="band--ink py-16 md:py-20 text-center relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-dose-paper">
+          ¿Listo para revivir tu computador o lanzar tu página web?
+        </h2>
+
+        <p class="text-dose-paper/80 text-sm sm:text-base font-body leading-relaxed max-w-2xl mx-auto">
+          Escríbenos directamente a nuestro WhatsApp oficial o síguenos en Instagram para ver fotos de mantenciones y testimonios reales en Concepción.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <a href="https://wa.me/569XXXXXXXX" class="js-wa-link btn btn--primary w-full sm:w-auto" data-wa-message="¡Hola Tech Doctor! 👋 Quiero hacer una consulta sobre servicio técnico o página web en Concepción.">
+            <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            Escribir por WhatsApp
+          </a>
+
+          <a href="https://www.instagram.com/techdoctor.ccp/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary w-full sm:w-auto">
+            <svg class="w-5 h-5 text-dose-accent shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            Instagram @techdoctor.ccp
+          </a>
+        </div>
+
+        <p class="font-mono text-xs text-dose-paper/60 pt-2">
+          Concepción, Biobío &middot; Respuesta rápida
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+
+  <!-- =========================================================================
+       8. FOOTER
+       ========================================================================= -->
+  <footer class="bg-dose-paper border-t border-dose-rule py-12 text-dose-muted text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+        
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full overflow-hidden border border-dose-accent p-0.5 bg-dose-card shadow-sm">
+              <img src="assets/logo.jpg" alt="Logo Tech Doctor" width="40" height="40" loading="lazy" decoding="async" class="w-full h-full object-cover rounded-full">
+            </div>
+            <div>
+              <span class="font-display font-extrabold text-lg text-dose-ink block">Tech Doctor</span>
+              <span class="font-mono text-xs text-dose-accent">@techdoctor.ccp</span>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm max-w-md font-body leading-relaxed text-dose-muted">
+            Servicio técnico especializado en computadores, notebooks y desarrollo web en Concepción, Chile. Valores transparentes y garantía real.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <span class="font-display font-bold text-dose-ink text-xs font-mono block">Navegación SPA</span>
+          <ul class="space-y-2 text-xs sm:text-sm font-body">
+            <li><a href="#inicio" class="hover:text-dose-ink transition-colors">Inicio</a></li>
+            <li><a href="#servicios" class="hover:text-dose-ink transition-colors">Servicios y Valores</a></li>
+            <li><a href="#desarrollo-web" class="hover:text-dose-ink transition-colors">Desarrollo Web</a></li>
+            <li><a href="#cotizador" class="hover:text-dose-ink transition-colors">Cotizador en Línea</a></li>
+            <li><a href="#por-que-nosotros" class="hover:text-dose-ink transition-colors">¿Por qué elegirnos?</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <span class="font-display font-bold text-dose-ink text-xs font-mono block">Ubicación &amp; contacto</span>
+          <ul class="space-y-2.5 text-xs text-dose-muted font-mono">
+            <li class="flex items-center gap-2">
+              <span class="text-dose-accent">&bull;</span>
+              <span>Concepción, Biobío, Chile</span>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/techdoctor.ccp/" target="_blank" rel="noopener noreferrer" class="hover:text-dose-ink transition-colors flex items-center gap-2">
+                <span class="text-dose-accent">&bull;</span>
+                <span>Instagram: @techdoctor.ccp</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/569XXXXXXXX" class="js-wa-link hover:text-dose-ink transition-colors flex items-center gap-2" data-wa-message="¡Hola Tech Doctor! Quisiera hacer una consulta sobre servicio técnico.">
+                <span class="text-dose-accent">&bull;</span>
+                <span>WhatsApp directo</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-dose-rule flex flex-col sm:flex-row items-center justify-between text-xs text-dose-muted gap-4 font-mono">
+        <p>&copy; <span id="current-year"></span> Tech Doctor (@techdoctor.ccp). Todos los derechos reservados.</p>
+        <p>Concepción, Chile</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- =========================================================================
+       9. BOTÓN FLOTANTE DE WHATSAPP (PRIMARIO OSCURO #16302F - ANTI-WHATSAPP)
+       ========================================================================= -->
+  <aside class="fixed bottom-6 right-6 z-50 flex items-center group">
+    <div class="hidden sm:block mr-3 py-1.5 px-3 rounded-xl bg-dose-card border border-dose-rule font-mono text-xs font-semibold text-dose-ink shadow-lg opacity-90 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+      ¿Dudas con tu equipo? <span class="text-dose-accent">¡Escríbenos!</span>
+    </div>
+
+    <a id="floating-whatsapp-btn" href="https://wa.me/569XXXXXXXX" class="btn-wa-float animate-wa-pulse focus:outline-none focus:ring-4 focus:ring-dose-accent/40" aria-label="Contactar por WhatsApp a Tech Doctor" data-wa-message="¡Hola Tech Doctor! 👋 Vi su sitio web y quisiera consultar por el servicio técnico en Concepción.">
+      <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+    </a>
+  </aside>
+
+  <!-- Script Principal Frontend -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
