@@ -1,7 +1,8 @@
 /* Hallmark · job: try · genre: modern-minimal · theme: dose (by request) · axes: light/grotesk-sans/chromatic-green */
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+/* Tipografías: assets/css/fonts.css (autohospedadas, subset latin) */
 
 :root {
+  color-scheme: light;
   /* Hallmark Dose Tokens Calibrados - Tech Doctor */
   --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -18,7 +19,7 @@
   /* 15% Tinta y Estructura (Petróleo Carbón Profundo & Pizarra Suave) */
   --color-ink: #16302F;
   --color-ink-2: #274544;
-  --color-muted: #364B4A;
+  --color-muted: #4E6160;
   --color-rule: #E3E1D8;
   --color-rule-dark: #CAC6BA;
 
@@ -85,11 +86,43 @@ h1, h2, h3, h4, .font-display {
 
 p {
   font-family: var(--font-body);
+  text-wrap: pretty;
 }
 
 .font-mono-dose, .dose, .label-mono {
   font-family: var(--font-outlier);
   font-variant-numeric: tabular-nums;
+}
+
+/* Utilidad usada en el HTML (antes dependía del CDN de Tailwind) */
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Oculta de forma determinista el menú móvil y sus iconos,
+   sin depender del orden de utilidades de Tailwind. */
+.is-hidden {
+  display: none !important;
+}
+
+/* Enlace de salto para navegación por teclado */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-input);
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 150ms ease;
+}
+
+.skip-link:focus-visible {
+  top: 1rem;
 }
 
 ::selection {
@@ -264,6 +297,14 @@ p {
   transform: translateY(-3px);
   border-color: var(--color-rule-dark);
   box-shadow: 0 1px 4px var(--shadow-color), 0 18px 36px -14px var(--shadow-color);
+}
+
+@media (hover: none) {
+  .dose-label:hover {
+    transform: none;
+    border-color: var(--color-rule);
+    box-shadow: 0 1px 3px var(--shadow-color), 0 12px 28px -12px var(--shadow-color);
+  }
 }
 
 .dose-label--featured {
