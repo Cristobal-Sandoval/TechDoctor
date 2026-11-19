@@ -127,7 +127,154 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => observer.observe(section));
   }
 
-  // 6. Calculadora Dinámica y Formulario de Cotización a WhatsApp
+  // 6. Switcher Dinámico de Tipo de Equipo (Notebook vs PC de Escritorio)
+  const tabNotebook = document.getElementById('tab-notebook');
+  const tabPc = document.getElementById('tab-pc');
+  let currentSelectedDevice = 'notebook';
+
+  const priceData = {
+    notebook: {
+      subheading: 'Valores claros y fijos para tu notebook. Diagnóstico honesto, sin costos sorpresa ni diagnósticos inflados.',
+      badge: 'Notebook',
+      formateo: {
+        price: '$20.000',
+        desc: 'Para notebooks lentos, con virus o fallas de Windows.',
+        subtext: 'Notebook · Windows limpio y rápido',
+        waMessage: '¡Hola Tech Doctor! 👋 Me gustaría agendar el servicio de Formateo y Optimización para mi notebook ($20.000 CLP). ¿Cómo coordinamos en Concepción?'
+      },
+      pack: {
+        price: '$30.000',
+        oldPrice: '$40.000',
+        savings: 'Ahorras $10.000',
+        desc: 'Tu notebook renovado por dentro y por fuera.',
+        subtext: 'Limpieza profunda + Formateo completo',
+        waMessage: '¡Hola Tech Doctor! 👋 Quiero agendar el Pack Completo (Limpieza + Formateo) para mi notebook ($30.000 CLP). ¿Cómo coordinamos en Concepción?'
+      },
+      limpieza: {
+        price: '$20.000',
+        desc: 'Para notebooks que calientan mucho, hacen ruido o se apagan.',
+        subtext: 'Notebook · Mantención térmica preventiva',
+        waMessage: '¡Hola Tech Doctor! 👋 Quiero agendar una Limpieza Física y Mantención para mi notebook ($20.000 CLP). ¿Cómo coordinamos en Concepción?'
+      }
+    },
+    pc: {
+      subheading: 'Valores claros y fijos para PC de escritorio (Torre / Gamer). Diagnóstico honesto y mantención dedicada.',
+      badge: 'PC Torre / Gamer',
+      formateo: {
+        price: '$25.000',
+        desc: 'Para computadores de escritorio o PC gamer lentos, con virus o fallas de Windows.',
+        subtext: 'PC de Escritorio · Windows limpio y rápido',
+        waMessage: '¡Hola Tech Doctor! 👋 Me gustaría agendar el servicio de Formateo y Optimización para mi PC de escritorio ($25.000 CLP). ¿Cómo coordinamos en Concepción?'
+      },
+      pack: {
+        price: '$35.000',
+        oldPrice: '$45.000',
+        savings: 'Ahorras $10.000',
+        desc: 'Tu PC de escritorio o torre gamer renovado por dentro y por fuera.',
+        subtext: 'Limpieza profunda + Formateo completo',
+        waMessage: '¡Hola Tech Doctor! 👋 Quiero agendar el Pack Completo (Limpieza + Formateo) para mi PC de escritorio ($35.000 CLP). ¿Cómo coordinamos en Concepción?'
+      },
+      limpieza: {
+        price: '$25.000',
+        desc: 'Para PC de escritorio o torre gamer con polvo acumulado, temperaturas altas o ventiladores ruidosos.',
+        subtext: 'PC de Escritorio · Mantención térmica preventiva',
+        waMessage: '¡Hola Tech Doctor! 👋 Quiero agendar una Limpieza Física y Mantención para mi PC de escritorio ($25.000 CLP). ¿Cómo coordinamos en Concepción?'
+      }
+    }
+  };
+
+  const updatePriceCards = (device) => {
+    currentSelectedDevice = device;
+    const data = priceData[device];
+    if (!data) return;
+
+    // Actualizar estado activo en los botones del selector
+    if (tabNotebook && tabPc) {
+      if (device === 'notebook') {
+        tabNotebook.classList.add('active');
+        tabNotebook.setAttribute('aria-pressed', 'true');
+        tabPc.classList.remove('active');
+        tabPc.setAttribute('aria-pressed', 'false');
+      } else {
+        tabPc.classList.add('active');
+        tabPc.setAttribute('aria-pressed', 'true');
+        tabNotebook.classList.remove('active');
+        tabNotebook.setAttribute('aria-pressed', 'false');
+      }
+    }
+
+    // Subtítulo de sección
+    const subheading = document.getElementById('services-subheading');
+    if (subheading) subheading.textContent = data.subheading;
+
+    // Tarjeta Formateo
+    const priceFormateo = document.getElementById('price-formateo');
+    const badgeFormateo = document.getElementById('badge-formateo');
+    const descFormateo = document.getElementById('desc-formateo');
+    const subtextFormateo = document.getElementById('subtext-formateo');
+    const btnWaFormateo = document.getElementById('btn-wa-formateo');
+
+    if (priceFormateo) priceFormateo.textContent = data.formateo.price;
+    if (badgeFormateo) badgeFormateo.textContent = data.badge;
+    if (descFormateo) descFormateo.textContent = data.formateo.desc;
+    if (subtextFormateo) subtextFormateo.textContent = data.formateo.subtext;
+    if (btnWaFormateo) {
+      btnWaFormateo.setAttribute('data-wa-message', data.formateo.waMessage);
+      btnWaFormateo.href = getWhatsAppUrl(data.formateo.waMessage);
+    }
+
+    // Tarjeta Pack Completo
+    const pricePack = document.getElementById('price-pack');
+    const oldPricePack = document.getElementById('oldprice-pack');
+    const stampSavings = document.getElementById('stamp-savings');
+    const badgePack = document.getElementById('badge-pack');
+    const descPack = document.getElementById('desc-pack');
+    const subtextPack = document.getElementById('subtext-pack');
+    const btnWaPack = document.getElementById('btn-wa-pack');
+
+    if (pricePack) pricePack.textContent = data.pack.price;
+    if (oldPricePack) oldPricePack.textContent = data.pack.oldPrice;
+    if (stampSavings) stampSavings.textContent = data.pack.savings;
+    if (badgePack) badgePack.textContent = data.badge;
+    if (descPack) descPack.textContent = data.pack.desc;
+    if (subtextPack) subtextPack.textContent = data.pack.subtext;
+    if (btnWaPack) {
+      btnWaPack.setAttribute('data-wa-message', data.pack.waMessage);
+      btnWaPack.href = getWhatsAppUrl(data.pack.waMessage);
+    }
+
+    // Tarjeta Limpieza
+    const priceLimpieza = document.getElementById('price-limpieza');
+    const badgeLimpieza = document.getElementById('badge-limpieza');
+    const descLimpieza = document.getElementById('desc-limpieza');
+    const subtextLimpieza = document.getElementById('subtext-limpieza');
+    const btnWaLimpieza = document.getElementById('btn-wa-limpieza');
+
+    if (priceLimpieza) priceLimpieza.textContent = data.limpieza.price;
+    if (badgeLimpieza) badgeLimpieza.textContent = data.badge;
+    if (descLimpieza) descLimpieza.textContent = data.limpieza.desc;
+    if (subtextLimpieza) subtextLimpieza.textContent = data.limpieza.subtext;
+    if (btnWaLimpieza) {
+      btnWaLimpieza.setAttribute('data-wa-message', data.limpieza.waMessage);
+      btnWaLimpieza.href = getWhatsAppUrl(data.limpieza.waMessage);
+    }
+
+    // Sincronizar selección con el selector del cotizador
+    const deviceSelect = document.getElementById('form-device');
+    if (deviceSelect && deviceSelect.value !== device && (device === 'notebook' || device === 'pc')) {
+      deviceSelect.value = device;
+      calculateEstimate();
+    }
+  };
+
+  if (tabNotebook) {
+    tabNotebook.addEventListener('click', () => updatePriceCards('notebook'));
+  }
+  if (tabPc) {
+    tabPc.addEventListener('click', () => updatePriceCards('pc'));
+  }
+
+  // 7. Calculadora Dinámica y Formulario de Cotización a WhatsApp
   const quoteForm = document.getElementById('whatsapp-quote-form');
   const deviceSelect = document.getElementById('form-device');
   const serviceSelect = document.getElementById('form-service');
@@ -196,7 +343,14 @@ document.addEventListener('DOMContentLoaded', () => {
     serviceSelect.addEventListener('change', calculateEstimate);
   }
   if (deviceSelect) {
-    deviceSelect.addEventListener('change', calculateEstimate);
+    deviceSelect.addEventListener('change', () => {
+      calculateEstimate();
+      if (deviceSelect.value === 'notebook' || deviceSelect.value === 'pc') {
+        if (deviceSelect.value !== currentSelectedDevice) {
+          updatePriceCards(deviceSelect.value);
+        }
+      }
+    });
   }
   // Ejecutar cálculo inicial
   calculateEstimate();
@@ -208,8 +362,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetService = trigger.getAttribute('data-service-val');
       if (targetService && serviceSelect) {
         serviceSelect.value = targetService;
-        calculateEstimate();
       }
+      if (deviceSelect && (currentSelectedDevice === 'notebook' || currentSelectedDevice === 'pc')) {
+        deviceSelect.value = currentSelectedDevice;
+      }
+      calculateEstimate();
     });
   });
 

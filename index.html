@@ -364,7 +364,7 @@
     <section id="servicios" class="scroll-mt-24 py-16 md:py-24 bg-dose-card border-b border-dose-rule relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <div class="text-center max-w-3xl mx-auto mb-8 space-y-3">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-dose-paper-2 border border-dose-rule text-xs font-mono text-dose-muted">
             <span class="w-1.5 h-1.5 rounded-full bg-dose-accent" aria-hidden="true"></span>
             Valores transparentes y sin sorpresas
@@ -372,9 +372,30 @@
           <h2 class="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-dose-ink tracking-tight">
             Servicio Técnico en Concepción: Precios Transparentes
           </h2>
-          <p class="text-dose-muted text-base sm:text-lg font-body">
-            Valores publicados para notebooks. Diagnóstico honesto, sin costos sorpresa ni diagnósticos inflados.
+          <p id="services-subheading" class="text-dose-muted text-base sm:text-lg font-body">
+            Valores publicados para tu equipo. Diagnóstico honesto, sin costos sorpresa ni diagnósticos inflados.
           </p>
+        </div>
+
+        <!-- Selector de Tipo de Equipo: Notebook vs PC de Escritorio (Por sobre los precios) -->
+        <div class="flex justify-center mb-10">
+          <div class="inline-flex p-1.5 rounded-2xl bg-dose-paper-2 border border-dose-rule shadow-inner" role="group" aria-label="Seleccionar tipo de equipo">
+            <button type="button" id="tab-notebook" class="device-tab active" data-device="notebook" aria-pressed="true">
+              <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="12" rx="2"/>
+                <path d="M2 20h20"/>
+              </svg>
+              <span>Notebook</span>
+            </button>
+            <button type="button" id="tab-pc" class="device-tab" data-device="pc" aria-pressed="false">
+              <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+              <span>PC de Escritorio / Torre</span>
+            </button>
+          </div>
         </div>
 
         <!-- Grilla de Precios: 3 Tarjetas -->
@@ -385,24 +406,24 @@
             <div class="space-y-4">
               <div class="flex items-center justify-between">
                 <span class="pill pill--accent font-mono text-xs">Formateo de Sistema</span>
-                <span class="text-xs font-mono text-dose-muted">Notebook y PC</span>
+                <span id="badge-formateo" class="text-xs font-mono text-dose-muted">Notebook</span>
               </div>
 
               <div>
                 <h3 class="font-display font-bold text-xl sm:text-2xl text-dose-ink">
                   Formateo y optimización
                 </h3>
-                <p class="text-sm sm:text-base text-dose-muted mt-1.5 font-body">
+                <p id="desc-formateo" class="text-sm sm:text-base text-dose-muted mt-1.5 font-body">
                   Para notebooks lentos, con virus o fallas de Windows.
                 </p>
               </div>
 
               <div class="pt-3 border-t border-dose-rule">
                 <div class="flex items-baseline gap-1.5 font-mono">
-                  <span class="text-2xl sm:text-3xl font-extrabold text-dose-ink">$20.000</span>
+                  <span id="price-formateo" class="text-2xl sm:text-3xl font-extrabold text-dose-ink">$20.000</span>
                   <span class="text-xs font-semibold text-dose-muted">CLP</span>
                 </div>
-                <span class="text-xs text-dose-muted font-mono block mt-0.5">Notebook &middot; Windows limpio y rápido</span>
+                <span id="subtext-formateo" class="text-xs text-dose-muted font-mono block mt-0.5">Notebook &middot; Windows limpio y rápido</span>
               </div>
 
               <ul class="space-y-3 pt-2 text-sm text-dose-muted font-body">
@@ -426,7 +447,7 @@
             </div>
 
             <div class="label__stub pt-5 mt-6 px-1">
-              <a href="https://wa.me/569XXXXXXXX" class="js-wa-link btn btn--secondary w-full" data-wa-message="¡Hola Tech Doctor! 👋 Me gustaría agendar el servicio de Formateo y Optimización para mi notebook ($20.000 CLP). ¿Cómo coordinamos en Concepción?">
+              <a id="btn-wa-formateo" href="https://wa.me/569XXXXXXXX" class="js-wa-link btn btn--secondary w-full" data-wa-message="¡Hola Tech Doctor! 👋 Me gustaría agendar el servicio de Formateo y Optimización para mi notebook ($20.000 CLP). ¿Cómo coordinamos en Concepción?">
                 Agendar formateo
               </a>
               <div class="text-center mt-2.5">
@@ -441,33 +462,33 @@
           <div class="dose-label dose-label--featured p-7 flex flex-col justify-between relative transform md:-translate-y-2 group">
             
             <!-- Stamp Badge No Cortado -->
-            <div class="absolute -top-3.5 right-6 z-10 stamp">
+            <div id="stamp-pack" class="absolute -top-3.5 right-6 z-10 stamp">
               <span>Más popular</span>
-              <span>Ahorras $10.000</span>
+              <span id="stamp-savings">Ahorras $10.000</span>
             </div>
 
             <div class="space-y-4 pt-1">
               <div class="flex items-center justify-between">
                 <span class="pill pill--accent font-mono text-xs">Servicio más completo</span>
-                <span class="text-xs font-mono text-dose-muted">Notebook y PC</span>
+                <span id="badge-pack" class="text-xs font-mono text-dose-muted">Notebook</span>
               </div>
 
               <div>
                 <h3 class="font-display font-bold text-xl sm:text-2xl text-dose-ink">
                   Pack completo: limpieza + formateo
                 </h3>
-                <p class="text-sm sm:text-base text-dose-muted mt-1.5 font-body">
+                <p id="desc-pack" class="text-sm sm:text-base text-dose-muted mt-1.5 font-body">
                   Tu notebook renovado por dentro y por fuera.
                 </p>
               </div>
 
               <div class="pt-3 border-t border-dose-rule">
                 <div class="flex items-baseline gap-2 font-mono">
-                  <span class="text-2xl sm:text-3xl font-extrabold text-dose-ink">$30.000</span>
+                  <span id="price-pack" class="text-2xl sm:text-3xl font-extrabold text-dose-ink">$30.000</span>
                   <span class="text-xs font-semibold text-dose-muted">CLP</span>
-                  <span class="text-xs text-dose-muted line-through ml-2 font-mono">$40.000</span>
+                  <span id="oldprice-pack" class="text-xs text-dose-muted line-through ml-2 font-mono">$40.000</span>
                 </div>
-                <span class="text-xs text-dose-muted font-mono block mt-0.5">Limpieza profunda + Formateo completo</span>
+                <span id="subtext-pack" class="text-xs text-dose-muted font-mono block mt-0.5">Limpieza profunda + Formateo completo</span>
               </div>
 
               <ul class="space-y-3 pt-2 text-sm text-dose-ink font-body">
@@ -491,7 +512,7 @@
             </div>
 
             <div class="label__stub pt-5 mt-6 px-1">
-              <a href="https://wa.me/569XXXXXXXX" class="js-wa-link btn btn--primary w-full" data-wa-message="¡Hola Tech Doctor! 👋 Quiero agendar el Pack Completo (Limpieza + Formateo) para mi notebook ($30.000 CLP). ¿Cómo coordinamos en Concepción?">
+              <a id="btn-wa-pack" href="https://wa.me/569XXXXXXXX" class="js-wa-link btn btn--primary w-full" data-wa-message="¡Hola Tech Doctor! 👋 Quiero agendar el Pack Completo (Limpieza + Formateo) para mi notebook ($30.000 CLP). ¿Cómo coordinamos en Concepción?">
                 Agendar pack completo
               </a>
               <div class="text-center mt-2.5">
@@ -507,24 +528,24 @@
             <div class="space-y-4">
               <div class="flex items-center justify-between">
                 <span class="pill pill--accent font-mono text-xs">Mantención y Limpieza</span>
-                <span class="text-xs font-mono text-dose-muted">Notebook y PC</span>
+                <span id="badge-limpieza" class="text-xs font-mono text-dose-muted">Notebook</span>
               </div>
 
               <div>
                 <h3 class="font-display font-bold text-xl sm:text-2xl text-dose-ink">
                   Limpieza física y mantención
                 </h3>
-                <p class="text-sm sm:text-base text-dose-muted mt-1.5 font-body">
+                <p id="desc-limpieza" class="text-sm sm:text-base text-dose-muted mt-1.5 font-body">
                   Para notebooks que calientan mucho, hacen ruido o se apagan.
                 </p>
               </div>
 
               <div class="pt-3 border-t border-dose-rule">
                 <div class="flex items-baseline gap-1.5 font-mono">
-                  <span class="text-2xl sm:text-3xl font-extrabold text-dose-ink">$20.000</span>
+                  <span id="price-limpieza" class="text-2xl sm:text-3xl font-extrabold text-dose-ink">$20.000</span>
                   <span class="text-xs font-semibold text-dose-muted">CLP</span>
                 </div>
-                <span class="text-xs text-dose-muted font-mono block mt-0.5">Notebook &middot; Mantención térmica preventiva</span>
+                <span id="subtext-limpieza" class="text-xs text-dose-muted font-mono block mt-0.5">Notebook &middot; Mantención térmica preventiva</span>
               </div>
 
               <ul class="space-y-3 pt-2 text-sm text-dose-muted font-body">
@@ -548,7 +569,7 @@
             </div>
 
             <div class="label__stub pt-5 mt-6 px-1">
-              <a href="https://wa.me/569XXXXXXXX" class="js-wa-link btn btn--secondary w-full" data-wa-message="¡Hola Tech Doctor! 👋 Quiero agendar una Limpieza Física y Mantención para mi notebook ($20.000 CLP). ¿Cómo coordinamos en Concepción?">
+              <a id="btn-wa-limpieza" href="https://wa.me/569XXXXXXXX" class="js-wa-link btn btn--secondary w-full" data-wa-message="¡Hola Tech Doctor! 👋 Quiero agendar una Limpieza Física y Mantención para mi notebook ($20.000 CLP). ¿Cómo coordinamos en Concepción?">
                 Agendar mantención
               </a>
               <div class="text-center mt-2.5">
@@ -559,29 +580,6 @@
             </div>
           </div>
 
-        </div>
-
-        <!-- Nota visible para PC de Escritorio -->
-        <div class="mt-10 p-5 rounded-2xl bg-dose-paper-2 border border-dose-rule flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div class="flex items-center gap-3.5 text-left">
-            <div class="p-2.5 rounded-xl bg-dose-paper border border-dose-rule text-dose-accent shrink-0">
-              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <rect x="2" y="3" width="20" height="14" rx="2"/>
-                <line x1="8" y1="21" x2="16" y2="21"/>
-                <line x1="12" y1="17" x2="12" y2="21"/>
-              </svg>
-            </div>
-            <div>
-              <span class="font-display font-bold text-base text-dose-ink block">Nota transparente para PC de escritorio (Torre / Gamer)</span>
-              <p class="text-sm text-dose-muted font-body mt-0.5">
-                Por la mayor cantidad de componentes, ventiladores y volumen de desarme, los servicios en PC tienen un recargo de <strong>$5.000 CLP</strong>.
-              </p>
-            </div>
-          </div>
-
-          <a href="https://wa.me/569XXXXXXXX" class="js-wa-link btn btn--secondary btn--sm shrink-0 whitespace-nowrap" data-wa-message="¡Hola Tech Doctor! 👋 Quisiera cotizar mantención para mi PC de escritorio en Concepción.">
-            Consultar por PC Torre
-          </a>
         </div>
 
       </div>
