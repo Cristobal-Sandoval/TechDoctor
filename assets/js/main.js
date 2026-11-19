@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     pc: {
       subheading: 'Valores claros y fijos para PC de escritorio (Torre / Gamer). Diagnóstico honesto y mantención dedicada.',
-      badge: 'PC Torre / Gamer',
+      badge: 'PC Escritorio',
       formateo: {
         price: '$25.000',
         desc: 'Para computadores de escritorio o PC gamer lentos, con virus o fallas de Windows.',
