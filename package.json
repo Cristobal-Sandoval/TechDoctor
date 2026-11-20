@@ -1,0 +1,15 @@
+{
+  "name": "tech-doctor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web frontend estático y landing pages de alta conversión para Tech Doctor en Concepción, Chile.",
+  "scripts": {
+    "build:css": "esbuild assets/css/main.css --bundle --minify --external:*.woff2 --outfile=assets/css/main.min.css",
+    "build:js": "esbuild assets/js/main.js --minify --target=es2018 --outfile=assets/js/main.min.js",
+    "build": "npm run build:css && npm run build:js",
+    "dev": "npx serve . -l 8080"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

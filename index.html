@@ -41,9 +41,167 @@
   <!-- CSS único (fuentes + utilidades + tokens), compilado y minificado -->
   <link rel="stylesheet" href="assets/css/main.min.css">
 
-  <!-- Datos Estructurados JSON-LD (externos: permiten CSP sin inline scripts) -->
-  <script type="application/ld+json" src="assets/json/local-business.js"></script>
-  <script type="application/ld+json" src="assets/json/faq.js"></script>
+  <!-- Datos Estructurados JSON-LD (Schema.org inline para compatibilidad completa con Googlebot) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://techdoctor.cl/#business",
+    "name": "Tech Doctor",
+    "description": "Servicio técnico de computadores (notebooks y PC de escritorio) y desarrollo web en Concepción, Chile.",
+    "url": "https://techdoctor.cl/",
+    "image": "https://techdoctor.cl/assets/img/og-image.jpg",
+    "logo": "https://techdoctor.cl/assets/img/logo-192.jpg",
+    "telephone": "+56956628609",
+    "priceRange": "CLP 20.000 - 70.000",
+    "currenciesAccepted": "CLP",
+    "paymentAccepted": "Efectivo, Transferencia",
+    "knowsLanguage": "es-CL",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Concepción",
+      "addressRegion": "Biobío",
+      "addressCountry": "CL"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -36.8270,
+      "longitude": -73.0503
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Concepción" },
+      { "@type": "AdministrativeArea", "name": "Región del Biobío" }
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+56956628609",
+      "contactType": "customer service",
+      "availableLanguage": ["es-CL"],
+      "areaServed": "CL"
+    },
+    "sameAs": [
+      "https://www.instagram.com/techdoctor.ccp/"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios Tech Doctor",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Formateo y Optimización Notebook" },
+          "price": "20000",
+          "priceCurrency": "CLP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Limpieza Física y Mantención Térmica Notebook" },
+          "price": "20000",
+          "priceCurrency": "CLP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Pack Completo Limpieza + Formateo Notebook" },
+          "price": "30000",
+          "priceCurrency": "CLP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Formateo y Optimización PC de Escritorio" },
+          "price": "20000",
+          "priceCurrency": "CLP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Limpieza Física y Mantención Térmica PC de Escritorio" },
+          "price": "30000",
+          "priceCurrency": "CLP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Pack Completo Limpieza + Formateo PC de Escritorio" },
+          "price": "40000",
+          "priceCurrency": "CLP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Creación de Página Web Frontend Básica" },
+          "price": "60000",
+          "priceCurrency": "CLP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Página Web + Dominio .cl" },
+          "price": "70000",
+          "priceCurrency": "CLP"
+        }
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cómo agendo un servicio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Escríbenos por WhatsApp con el tipo de equipo y lo que le ocurre. Coordinamos el día y la entrega del equipo en Concepción, y te confirmamos el valor antes de intervenirlo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué incluye el pack completo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Limpieza física profunda de ventiladores y disipador, cambio de pasta térmica, formateo limpio con controladores oficiales y pruebas finales de temperatura y velocidad."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué pasa con mis archivos si formatean el equipo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El formateo realiza una instalación limpia del sistema operativo y borra el contenido del disco. Como usuario, debes respaldar previamente tus fotos, documentos y archivos personales antes de entregar el equipo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Atienden notebooks y PC de escritorio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Trabajamos notebooks y PC de escritorio o torre gamer. Los valores son: formateo $20.000 en ambos casos; limpieza física y mantención térmica $20.000 en notebook y $30.000 en PC; pack completo $30.000 en notebook y $40.000 en PC."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué formas de pago aceptan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Efectivo y transferencia bancaria. El valor se confirma por WhatsApp antes de empezar el trabajo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿La página web tiene algún cobro mensual?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. El plan básico es un pago único de $60.000 y el hosting gratuito recomendado no tiene costo mensual. Si quieres dominio propio .cl, se suma $10.000 por el primer año en NIC Chile."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Dónde atienden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En Concepción, Región del Biobío. Coordinamos el punto y horario de entrega del equipo directamente por WhatsApp."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="bg-dose-paper text-dose-ink font-sans antialiased min-h-screen flex flex-col">
 
@@ -1022,10 +1180,10 @@
             <li><a href="#cotizador" class="hover:text-dose-ink transition-colors">Cotizador en Línea</a></li>
             <li><a href="#por-que-nosotros" class="hover:text-dose-ink transition-colors">¿Por qué elegirnos?</a></li>
             <li><a href="#preguntas-frecuentes" class="hover:text-dose-ink transition-colors">Preguntas Frecuentes</a></li>
-            <li class="pt-1"><a href="servicio-tecnico-notebook-concepcion.html" class="hover:text-dose-ink transition-colors">Guía: servicio técnico de notebook</a></li>
-            <li><a href="formateo-pc-concepcion.html" class="hover:text-dose-ink transition-colors">Guía: formateo de PC</a></li>
-            <li><a href="limpieza-pasta-termica-concepcion.html" class="hover:text-dose-ink transition-colors">Guía: limpieza y pasta térmica</a></li>
-            <li><a href="desarrollo-web-concepcion.html" class="hover:text-dose-ink transition-colors">Guía: desarrollo web</a></li>
+            <li class="pt-1"><a href="/servicio-tecnico-notebook-concepcion" class="hover:text-dose-ink transition-colors">Guía: servicio técnico de notebook</a></li>
+            <li><a href="/formateo-pc-concepcion" class="hover:text-dose-ink transition-colors">Guía: formateo de PC</a></li>
+            <li><a href="/limpieza-pasta-termica-concepcion" class="hover:text-dose-ink transition-colors">Guía: limpieza y pasta térmica</a></li>
+            <li><a href="/desarrollo-web-concepcion" class="hover:text-dose-ink transition-colors">Guía: desarrollo web</a></li>
           </ul>
         </div>
 

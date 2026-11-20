@@ -70,8 +70,8 @@ Las mayores oportunidades están en **SEO local / posicionamiento** (una sola UR
   /assets/*
     Cache-Control: public, max-age=31536000, immutable
   ```
-- **Ojo con CSP:** los dos bloques `<script type="application/ld+json">` son inline. Para un CSP estricto, moverlos a archivos externos (`<script type="application/ld+json" src="assets/json/business.js">`, soportado por Google) o añadir sus hashes. No resolverlo con `'unsafe-inline'`.
-- Redirigir HTTP→HTTPS y `www`→dominio canónico en el hosting.
+- **Ojo con CSP y Schema:** Googlebot exige que los bloques `<script type="application/ld+json">` sean **inline** (Googlebot no descarga JSON-LD referenciado mediante atributo `src`). Se mantienen inline en el HTML para compatibilidad total con Googlebot y Rich Snippets, respaldados en `assets/json/*.json`.
+- Redirigir HTTP→HTTPS y `www`→dominio canónico en el hosting. Se configuró `cleanUrls: true` en `vercel.json` y URLs canónicas limpias.
 
 ---
 

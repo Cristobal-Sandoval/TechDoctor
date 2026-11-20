@@ -86,15 +86,19 @@ Todos los botones de WhatsApp del sitio, el botón flotante y el formulario de c
 Después de editar `assets/css/*.css` (excepto `main.min.css`) o `assets/js/main.js`:
 
 ```bash
-npx esbuild assets/css/main.css --bundle --minify --external:*.woff2 --outfile=assets/css/main.min.css
-npx esbuild assets/js/main.js --minify --target=es2018 --outfile=assets/js/main.min.js
+# Compilar todo en un solo comando:
+npm run build
+
+# O individualmente:
+npm run build:css
+npm run build:js
 ```
 
-Los datos estructurados viven en `assets/json/` y se cargan con `<script type="application/ld+json" src="…">`. Eso permite servir un CSP estricto sin scripts inline. Si editas precios en el catálogo, actualiza también los JSON-LD (`local-business.js`, `faq.js` y los de cada servicio).
+Los datos estructurados Schema.org (`LocalBusiness`, `FAQPage`, `Service`) están embebidos inline en cada HTML para garantizar su rastreo inmediato por Googlebot y herramientas de rich snippets. Los archivos en `assets/json/*.json` se conservan como referencia estructurada del catálogo. Si editas precios en el catálogo, actualiza también los bloques de schema en los archivos HTML correspondientes.
 
-### Cabeceras y redirecciones
+### Cabeceras, Clean URLs y redirecciones
 
-`_headers` y `_redirects` cubren Netlify/Cloudflare Pages; `vercel.json` cubre Vercel. Incluyen CSP, HSTS, `nosniff`, `Referrer-Policy`, `Permissions-Policy`, caché de larga duración para `/assets/*` y el 301 de `/servicios` a `/#servicios`.
+`_headers` y `_redirects` cubren Netlify/Cloudflare Pages; `vercel.json` cubre Vercel (con `cleanUrls: true`). Incluyen CSP, HSTS, `nosniff`, `Referrer-Policy`, `Permissions-Policy`, caché de larga duración para `/assets/*` y el 301 de `/servicios` a `/#servicios`.
 
 El proyecto es 100% estático (HTML, CSS y JS puro) y puede desplegarse en cualquier servicio de hosting estático:
 
