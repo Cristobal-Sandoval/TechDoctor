@@ -1,0 +1,7 @@
+/* Entrada única para compilar el CSS final (fuentes + utilidades + tokens).
+   Editar los archivos originales y regenerar main.min.css con:
+   npx esbuild assets/css/main.css --bundle --minify --outfile=assets/css/main.min.css */
+@import './fonts.css';
+@import './tailwind.css';
+@import './utilities-extra.css';
+@import './styles.css';

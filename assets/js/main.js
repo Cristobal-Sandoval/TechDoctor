@@ -26,7 +26,6 @@ const CATALOG = {
   notebook: {
     label: "Notebook",
     badge: "Notebook",
-    surcharge: 0,
     subheading: "Valores claros y fijos para tu notebook. Diagnóstico honesto, sin costos sorpresa ni diagnósticos inflados.",
     services: {
       formateo: {
@@ -57,7 +56,6 @@ const CATALOG = {
   pc: {
     label: "PC de Escritorio",
     badge: "PC Escritorio",
-    surcharge: 0,
     subheading: "Valores claros y fijos para PC de escritorio (Torre / Gamer). Diagnóstico honesto y mantención dedicada.",
     services: {
       formateo: {
@@ -438,8 +436,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let note = service.note;
     if (deviceVal === "otro") {
       note += " · Valor referencial de notebook, se confirma al revisar el equipo";
-    } else if (deviceKey === "pc" && CATALOG.pc.surcharge > 0) {
-      note += ` (+ ${formatCLP(CATALOG.pc.surcharge)} CLP recargo por PC de escritorio)`;
     }
     if (estimateNote) estimateNote.textContent = note;
   }

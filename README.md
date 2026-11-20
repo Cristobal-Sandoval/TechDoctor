@@ -20,21 +20,31 @@ Inspirada en el sistema editorial y minimalista de **Hallmark (Tema Dose)**:
 
 ```text
 tech-doctor/
-├── index.html                # SPA principal (HTML5 semántico, Schema.org y FAQ)
-├── 404.html                  # Página de error 404 personalizada
-├── servicios.html            # Redirección amigable a index.html#servicios
-├── robots.txt                # Directivas de rastreo para buscadores
-├── sitemap.xml               # Mapa del sitio para indexación
+├── index.html                          # SPA principal (HTML5 semántico y datos externos)
+├── 404.html                            # Página de error 404 personalizada
+├── servicios.html                      # Redirección a index.html#servicios (fallback)
+├── servicio-tecnico-notebook-concepcion.html
+├── formateo-pc-concepcion.html
+├── limpieza-pasta-termica-concepcion.html
+├── desarrollo-web-concepcion.html      # Páginas de servicio con contenido y schema propios
+├── robots.txt                          # Directivas de rastreo para buscadores
+├── sitemap.xml                         # Mapa del sitio (página principal + guías)
+├── _headers / vercel.json              # Cabeceras de seguridad y caché
+├── _redirects / vercel.json            # Redirección 301 de /servicios
 ├── assets/
-│   ├── logo.jpg              # Logo original de alta resolución
 │   ├── css/
-│   │   ├── tailwind.css      # Utilidades CSS precompiladas (estático)
-│   │   ├── fonts.css         # Declaraciones @font-face locales
-│   │   └── styles.css        # Variables de diseño, controles y animaciones
-│   ├── fonts/                # Tipografías WOFF2 locales (Inter, Jakarta, DM Mono)
-│   ├── img/                  # Favicons, iconos táctiles y OpenGraph preview
-│   └── js/
-│       └── main.js           # Catálogo de servicios, ScrollSpy, cotizador y WhatsApp
+│   │   ├── main.css                    # Entrada de compilación (@import)
+│   │   ├── main.min.css                # CSS final (fuentes + utilidades + tokens)
+│   │   ├── fonts.css                   # @font-face locales
+│   │   ├── tailwind.css                # Utilidades generadas
+│   │   ├── utilities-extra.css         # Utilidades faltantes en la compilación original
+│   │   └── styles.css                  # Variables de diseño, controles y animaciones
+│   ├── fonts/                          # WOFF2 locales (Inter, Jakarta, DM Mono)
+│   ├── img/                            # Favicons, iconos táctiles y OpenGraph
+│   ├── js/
+│   │   ├── main.js                     # Fuente: catálogo, ScrollSpy, cotizador, WhatsApp
+│   │   └── main.min.js                 # JS final minificado
+│   └── json/                           # JSON-LD externo (LocalBusiness, FAQ, Service)
 └── README.md
 ```
 
@@ -70,6 +80,21 @@ Todos los botones de WhatsApp del sitio, el botón flotante y el formulario de c
 ---
 
 ## 🚀 Despliegue
+
+### Regenerar CSS/JS compilados
+
+Después de editar `assets/css/*.css` (excepto `main.min.css`) o `assets/js/main.js`:
+
+```bash
+npx esbuild assets/css/main.css --bundle --minify --external:*.woff2 --outfile=assets/css/main.min.css
+npx esbuild assets/js/main.js --minify --target=es2018 --outfile=assets/js/main.min.js
+```
+
+Los datos estructurados viven en `assets/json/` y se cargan con `<script type="application/ld+json" src="…">`. Eso permite servir un CSP estricto sin scripts inline. Si editas precios en el catálogo, actualiza también los JSON-LD (`local-business.js`, `faq.js` y los de cada servicio).
+
+### Cabeceras y redirecciones
+
+`_headers` y `_redirects` cubren Netlify/Cloudflare Pages; `vercel.json` cubre Vercel. Incluyen CSP, HSTS, `nosniff`, `Referrer-Policy`, `Permissions-Policy`, caché de larga duración para `/assets/*` y el 301 de `/servicios` a `/#servicios`.
 
 El proyecto es 100% estático (HTML, CSS y JS puro) y puede desplegarse en cualquier servicio de hosting estático:
 

@@ -1,0 +1,84 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://techdoctor.cl/limpieza-pasta-termica-concepcion.html#service",
+      "name": "Limpieza y cambio de pasta térmica en Concepción",
+      "description": "Desensamble, limpieza de ventiladores y disipadores, cambio de pasta térmica y verificación de temperaturas para notebooks y PC en Concepción.",
+      "provider": {
+        "@id": "https://techdoctor.cl/#business"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Concepción"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "20000",
+        "priceCurrency": "CLP"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://techdoctor.cl/limpieza-pasta-termica-concepcion.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://techdoctor.cl/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Limpieza y pasta térmica",
+          "item": "https://techdoctor.cl/limpieza-pasta-termica-concepcion.html"
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://techdoctor.cl/#business",
+      "name": "Tech Doctor",
+      "url": "https://techdoctor.cl/",
+      "telephone": "+56956628609",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Concepción",
+        "addressRegion": "Biobío",
+        "addressCountry": "CL"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://techdoctor.cl/limpieza-pasta-termica-concepcion.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tarda la mantención?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende del equipo; te confirmamos el plazo por WhatsApp antes de recibirlo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿La pasta térmica es de buena calidad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usamos pasta de alto rendimiento y verificamos temperaturas al finalizar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Sirve si el equipo ya se apaga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En muchos casos sí, pero hacemos diagnóstico previo para descartar fallas de hardware."
+          }
+        }
+      ]
+    }
+  ]
+}

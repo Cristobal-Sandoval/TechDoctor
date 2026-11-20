@@ -1,0 +1,84 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://techdoctor.cl/desarrollo-web-concepcion.html#service",
+      "name": "Desarrollo web en Concepción",
+      "description": "Diseño y desarrollo de landing pages y sitios frontend de hasta 2 páginas, responsivos y optimizados para conversión en Concepción.",
+      "provider": {
+        "@id": "https://techdoctor.cl/#business"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Concepción"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "60000",
+        "priceCurrency": "CLP"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://techdoctor.cl/desarrollo-web-concepcion.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://techdoctor.cl/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Desarrollo web",
+          "item": "https://techdoctor.cl/desarrollo-web-concepcion.html"
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://techdoctor.cl/#business",
+      "name": "Tech Doctor",
+      "url": "https://techdoctor.cl/",
+      "telephone": "+56956628609",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Concepción",
+        "addressRegion": "Biobío",
+        "addressCountry": "CL"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://techdoctor.cl/desarrollo-web-concepcion.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Hay cobro mensual?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. El plan es pago único. El hosting recomendado es gratuito; el dominio .cl se paga una vez al año si lo contratas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo vender productos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El plan básico es una landing informativa. Para tienda online lo evaluamos por separado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El sitio se ve bien en el celular?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, el diseño es responsivo desde el inicio."
+          }
+        }
+      ]
+    }
+  ]
+}

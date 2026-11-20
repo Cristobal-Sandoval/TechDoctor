@@ -1,0 +1,38 @@
+/* Utilidades que faltaban en el Tailwind compilado original.
+   Se mantienen aquí para no regenerar toda la hoja y evitar cambios visuales. */
+
+.list-disc { list-style-type: disc; }
+.pl-5 { padding-left: 1.25rem; }
+.underline-offset-2 { text-underline-offset: 2px; }
+.mb-5 { margin-bottom: 1.25rem; }
+.mt-7 { margin-top: 1.75rem; }
+.mt-10 { margin-top: 2.5rem; }
+.py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+.pb-3\.5 { padding-bottom: 0.875rem; }
+.min-w-0 { min-width: 0; }
+.object-contain { object-fit: contain; }
+.transition-transform { transition-property: transform; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 1.25rem;
+}
+.space-y-10 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 2.5rem;
+}
+
+.hover\:text-dose-accent-deep:hover { color: var(--color-accent-deep); }
+.group:hover .group-hover\:scale-105 { transform: scale(1.05); }
+
+@media (min-width: 640px) {
+  .sm\:inline { display: inline; }
+  .sm\:inline-flex { display: inline-flex; }
+  .sm\:gap-3 { gap: 0.75rem; }
+  .sm\:h-12 { height: 3rem; }
+  .sm\:h-14 { height: 3.5rem; }
+  .sm\:w-12 { width: 3rem; }
+  .sm\:w-14 { width: 3.5rem; }
+}
+
+@media (min-width: 768px) {
+  .md\:py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+}

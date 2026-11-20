@@ -1,0 +1,84 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://techdoctor.cl/formateo-pc-concepcion.html#service",
+      "name": "Formateo y optimización de PC en Concepción",
+      "description": "Instalación limpia de Windows, controladores oficiales y optimización para PC de escritorio y torre gamer en Concepción.",
+      "provider": {
+        "@id": "https://techdoctor.cl/#business"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Concepción"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "20000",
+        "priceCurrency": "CLP"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://techdoctor.cl/formateo-pc-concepcion.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://techdoctor.cl/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Formateo de PC",
+          "item": "https://techdoctor.cl/formateo-pc-concepcion.html"
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://techdoctor.cl/#business",
+      "name": "Tech Doctor",
+      "url": "https://techdoctor.cl/",
+      "telephone": "+56956628609",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Concepción",
+        "addressRegion": "Biobío",
+        "addressCountry": "CL"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://techdoctor.cl/formateo-pc-concepcion.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Instalan los programas que usaba?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Instalamos navegadores y utilidades esenciales. Si necesitas software específico con licencia, lo coordinamos contigo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Pierdo mis archivos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, el formateo borra el disco. Debes respaldar tus archivos antes de entregar el equipo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Atienden torres gamer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, trabajamos PC de escritorio y torres gamer en Concepción."
+          }
+        }
+      ]
+    }
+  ]
+}
