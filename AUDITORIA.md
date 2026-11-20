@@ -10,7 +10,9 @@ Estado: sitio estático (HTML + CSS + JS puro, sin backend ni dependencias en ru
 
 ## Estado de implementación (rama `mejoras/auditoria-2026-11`)
 
-Ya aplicado en esta rama: **A1, A2, A4 (parcial: teléfono visible + `ContactPoint`), A5, B1, B4, B5, B6, C1–C6** y **A3** (4 páginas de servicio con schema propio, enlaces internos y sitemap actualizado).
+Ya aplicado en esta rama: **A1, A2, A4 (parcial: `ContactPoint`, sin CTA de llamadas por decisión del negocio), A5, B1, B4, B5, B6, C1–C6** y **A3** (4 páginas de servicio con schema propio, enlaces internos y sitemap actualizado).
+
+Toda la conversión del sitio apunta a WhatsApp; no hay enlaces `tel:` visibles.
 
 Queda pendiente fuera del código: gestionar el **Google Business Profile** (A4 completa), medir con **PageSpeed Insights / Search Console**, y validar el despliegue con las cabeceras del hosting.
 

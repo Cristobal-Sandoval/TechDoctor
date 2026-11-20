@@ -7,7 +7,7 @@
       "name": "¿Cómo agendo un servicio?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Escríbenos por WhatsApp o llámanos con el tipo de equipo y lo que le ocurre. Coordinamos el día y la entrega del equipo en Concepción, y te confirmamos el valor antes de intervenirlo."
+        "text": "Escríbenos por WhatsApp con el tipo de equipo y lo que le ocurre. Coordinamos el día y la entrega del equipo en Concepción, y te confirmamos el valor antes de intervenirlo."
       }
     },
     {
