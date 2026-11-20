@@ -3,7 +3,7 @@
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://techdoctor.cl/servicio-tecnico-notebook-concepcion.html#service",
+      "@id": "https://techdoctor.cl/servicio-tecnico-notebook-concepcion#service",
       "name": "Servicio técnico de notebooks en Concepción",
       "description": "Diagnóstico, formateo, limpieza interna y cambio de pasta térmica para notebooks en Concepción, con precios fijos confirmados antes de intervenir el equipo.",
       "provider": {
@@ -21,7 +21,7 @@
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://techdoctor.cl/servicio-tecnico-notebook-concepcion.html#breadcrumb",
+      "@id": "https://techdoctor.cl/servicio-tecnico-notebook-concepcion#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -33,7 +33,7 @@
           "@type": "ListItem",
           "position": 2,
           "name": "Servicio técnico de notebook",
-          "item": "https://techdoctor.cl/servicio-tecnico-notebook-concepcion.html"
+          "item": "https://techdoctor.cl/servicio-tecnico-notebook-concepcion"
         }
       ]
     },
@@ -52,7 +52,7 @@
     },
     {
       "@type": "FAQPage",
-      "@id": "https://techdoctor.cl/servicio-tecnico-notebook-concepcion.html#faq",
+      "@id": "https://techdoctor.cl/servicio-tecnico-notebook-concepcion#faq",
       "mainEntity": [
         {
           "@type": "Question",

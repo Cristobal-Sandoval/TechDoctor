@@ -6,10 +6,13 @@
   "scripts": {
     "build:css": "esbuild assets/css/main.css --bundle --minify --external:*.woff2 --outfile=assets/css/main.min.css",
     "build:js": "esbuild assets/js/main.js --minify --target=es2018 --outfile=assets/js/main.min.js",
-    "build": "npm run build:css && npm run build:js",
-    "dev": "npx serve . -l 8080"
+    "sync:schema": "node scripts/sync-jsonld.mjs",
+    "check:schema": "node scripts/sync-jsonld.mjs --check",
+    "build": "npm run check:schema && npm run build:css && npm run build:js",
+    "dev": "serve . -l 8080"
   },
   "devDependencies": {
-    "esbuild": "^0.28.2"
+    "esbuild": "^0.28.2",
+    "serve": "^14.2.8"
   }
 }

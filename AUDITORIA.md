@@ -16,7 +16,7 @@ Toda la conversión del sitio apunta a WhatsApp; no hay enlaces `tel:` visibles.
 
 Queda pendiente fuera del código: gestionar el **Google Business Profile** (A4 completa), medir con **PageSpeed Insights / Search Console**, y validar el despliegue con las cabeceras del hosting.
 
-Verificación local: servidor `python3 -m http.server 8080`, sin errores de consola, interactividad del selector/cotizador OK, y Lighthouse **100/100/100** en accesibilidad, buenas prácticas y SEO tanto en `index.html` como en una página de servicio.
+Verificación local: `npm run dev` (serve con clean URLs), sin errores de consola, interactividad del selector/cotizador OK, y Lighthouse **100/100/100** en accesibilidad, buenas prácticas y SEO tanto en `index.html` como en una página de servicio. El CSP se probó con un servidor que envía las cabeceras reales de `_headers`.
 
 ---
 
@@ -54,7 +54,7 @@ Las mayores oportunidades están en **SEO local / posicionamiento** (una sola UR
 
 ### A4. Google Business Profile (la palanca #1 en SEO local)
 - No se arregla en código, pero es crítico: ficha reclamada, categoría **Computer repair service**, NAP idéntico al sitio (teléfono `+569 5662 8609`, Concepción, Biobío), horarios, fotos reales y reseñas.
-- **Acción en código relacionada:** mostrar el teléfono como texto y enlace `tel:+56956628609` en header/footer (además del WhatsApp) y añadir `ContactPoint` al JSON-LD de `LocalBusiness`. Hoy el teléfono solo existe en el schema y en `wa.me`. El teléfono está duplicado en `main.js:13`, `index.html` (varios) y `404.html:37` → centralizar o documentar.
+- **Acción en código relacionada:** mantener `ContactPoint` con el teléfono en el JSON-LD de `LocalBusiness` y dejar WhatsApp como único canal visible. Por decisión del negocio no se muestran enlaces `tel:` ni CTAs de llamada. El teléfono sigue duplicado en `main.js:13`, `index.html` y `404.html:37` → centralizar o documentar.
 
 ### A5. Cabeceras de seguridad y HTTPS (nivel hosting)
 - No hay CSP, HSTS, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy` ni reglas de caché.
@@ -70,8 +70,8 @@ Las mayores oportunidades están en **SEO local / posicionamiento** (una sola UR
   /assets/*
     Cache-Control: public, max-age=31536000, immutable
   ```
-- **Ojo con CSP y Schema:** Googlebot exige que los bloques `<script type="application/ld+json">` sean **inline** (Googlebot no descarga JSON-LD referenciado mediante atributo `src`). Se mantienen inline en el HTML para compatibilidad total con Googlebot y Rich Snippets, respaldados en `assets/json/*.json`.
-- Redirigir HTTP→HTTPS y `www`→dominio canónico en el hosting. Se configuró `cleanUrls: true` en `vercel.json` y URLs canónicas limpias.
+- **JSON-LD y CSP:** el JSON-LD va **inline** porque un `<script type="application/ld+json">` es un *data block* y el estándar HTML no permite `src` en él; Google lee el markup directamente de la página. Los data blocks no se ejecutan, así que el CSP `script-src 'self'` **no los bloquea**. Los archivos en `assets/json/*.json` son una copia de referencia, no se cargan en runtime.
+- Redirigir HTTP→HTTPS y `www`→dominio canónico en el hosting. Se configuró `cleanUrls: true` en `vercel.json` y todas las URLs internas, canonicals y sitemap usan la forma limpia (`/slug`, sin `.html`).
 
 ---
 
@@ -126,8 +126,8 @@ Las mayores oportunidades están en **SEO local / posicionamiento** (una sola UR
 
 ## Plan sugerido (por lotes)
 
-1. **Lote 1 — Correcciones (1–2 h):** A1, A2, C6, teléfono `tel:` + `ContactPoint`.
-2. **Lote 2 — Bloque técnico (2–3 h):** A5 (headers + CSP con JSON-LD externo), B4 (minificar, quitar assets, `defer`), B5, B6.
+1. **Lote 1 — Correcciones (1–2 h):** A1, A2, C6, `ContactPoint` (sin CTAs de llamada).
+2. **Lote 2 — Bloque técnico (2–3 h):** A5 (headers + CSP con JSON-LD inline), B4 (minificar, quitar assets, `defer`), B5, B6.
 3. **Lote 3 — Contenido y SEO local (1–2 semanas):** A3 (páginas de servicio), A4 (Google Business Profile), B1 (H1), B2 (prueba social).
 4. **Lote 4 — Validación:** Lighthouse/PSI, Search Console, Core Web Vitals, A/B del CTA.
 

@@ -31,6 +31,8 @@ tech-doctor/
 ├── sitemap.xml                         # Mapa del sitio (página principal + guías)
 ├── _headers / vercel.json              # Cabeceras de seguridad y caché
 ├── _redirects / vercel.json            # Redirección 301 de /servicios
+├── serve.json                          # Clean URLs para el servidor local (npm run dev)
+├── scripts/sync-jsonld.mjs             # Sincroniza assets/json con el JSON-LD inline
 ├── assets/
 │   ├── css/
 │   │   ├── main.css                    # Entrada de compilación (@import)
@@ -44,7 +46,7 @@ tech-doctor/
 │   ├── js/
 │   │   ├── main.js                     # Fuente: catálogo, ScrollSpy, cotizador, WhatsApp
 │   │   └── main.min.js                 # JS final minificado
-│   └── json/                           # JSON-LD externo (LocalBusiness, FAQ, Service)
+│   └── json/                           # Copia de referencia del JSON-LD inline
 └── README.md
 ```
 
@@ -94,7 +96,26 @@ npm run build:css
 npm run build:js
 ```
 
-Los datos estructurados Schema.org (`LocalBusiness`, `FAQPage`, `Service`) están embebidos inline en cada HTML para garantizar su rastreo inmediato por Googlebot y herramientas de rich snippets. Los archivos en `assets/json/*.json` se conservan como referencia estructurada del catálogo. Si editas precios en el catálogo, actualiza también los bloques de schema en los archivos HTML correspondientes.
+Los datos estructurados Schema.org (`LocalBusiness`, `FAQPage`, `Service`, `BreadcrumbList`) están embebidos inline en cada HTML. Eso es lo correcto: un `<script type="application/ld+json">` es un *data block* y el estándar HTML no permite usar `src` en él; Google lee el markup directamente de la página. Como los data blocks no se ejecutan, el CSP `script-src 'self'` no los bloquea.
+
+Los archivos en `assets/json/*.json` son una copia de referencia generada desde el HTML, no se cargan en tiempo de ejecución. Para mantenerlos sincronizados:
+
+```bash
+npm run sync:schema    # regenera assets/json desde el JSON-LD inline
+npm run check:schema   # falla si hay diferencias
+```
+
+`npm run build` ejecuta `check:schema` antes de compilar, así que evita publicar un schema de referencia desactualizado.
+
+### Servidor local
+
+```bash
+npm install
+npm run dev
+# http://localhost:8080
+```
+
+`serve.json` activa las clean URLs (`/formateo-pc-concepcion` en vez de `/formateo-pc-concepcion.html`). `serve` no aplica `_headers`; para probar el CSP real hay que usar el hosting o un servidor que envíe esas cabeceras.
 
 ### Cabeceras, Clean URLs y redirecciones
 
@@ -103,4 +124,4 @@ Los datos estructurados Schema.org (`LocalBusiness`, `FAQPage`, `Service`) está
 El proyecto es 100% estático (HTML, CSS y JS puro) y puede desplegarse en cualquier servicio de hosting estático:
 
 1. **Vercel / Netlify / Cloudflare Pages (Recomendado):** Conectar el repositorio de GitHub para despliegues automáticos en la raíz del dominio.
-2. **GitHub Pages:** Habilitar desde *Settings > Pages* seleccionando la rama `main` y la carpeta `/ (root)`.
+2. **GitHub Pages:** Habilitar desde *Settings > Pages* seleccionando la rama `main` y la carpeta `/ (root)`. Ojo: GitHub Pages no soporta clean URLs ni `_headers`; los enlaces sin `.html` darían 404 y no se aplicarían CSP/HSTS. Para ese hosting habría que volver a enlaces `.html` o usar un proveedor con clean URLs.

@@ -1,6 +1,19 @@
 /* Utilidades que faltaban en el Tailwind compilado original.
    Se mantienen aquí para no regenerar toda la hoja y evitar cambios visuales. */
 
+/* Sprite SVG oculto (antes usaba style="position:absolute", bloqueado por CSP). */
+.icon-sprite { position: absolute; }
+
+/* Página fallback de redirección (/servicios) sin estilos inline. */
+.redirect-page {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  padding: 2rem;
+  text-align: center;
+}
+.redirect-page a { color: inherit; font-weight: 700; }
+
 .list-disc { list-style-type: disc; }
 .pl-5 { padding-left: 1.25rem; }
 .underline-offset-2 { text-underline-offset: 2px; }
